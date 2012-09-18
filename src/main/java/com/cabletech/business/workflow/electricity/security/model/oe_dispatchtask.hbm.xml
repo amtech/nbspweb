@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2010-7-13 16:52:49 by Hibernate Tools 3.3.0.GA -->
+<hibernate-mapping>
+	<class
+		name="com.cabletech.business.workflow.electricity.security.model.OeDispatchTask"
+		table="OE_DISPATCHTASK">
+		<id name="id" type="string">
+			<column name="ID" length="12" />
+			<generator class="com.cabletech.common.util.StrSequenceGenerator">
+				<param name="sequence">SEQ_WORKFLOW_ID</param>
+				<param name="length">12</param>
+			</generator>
+		</id>
+		<property name="title" type="string">
+			<column name="TASK_NAME" />
+		</property>
+		<property name="stationId" type="string">
+			<column name="STATION_ID" />
+		</property>
+		<property name="stationType" type="string">
+			<column name="STATION_TYPE" />
+		</property>
+		<property name="stationAddress" type="string">
+			<column name="STATION_ADDRESS" />
+		</property>
+		<property name="blackoutTime" type="timestamp">
+			<column name="BLACKOUT_TIME" />
+		</property>
+		<property name="blackoutReason" type="string">
+			<column name="BLACKOUT_REASON" />
+		</property>
+		<property name="maintenanceId" type="string">
+			<column name="MAINTENANCE_ID" />
+		</property>
+		<property name="creator" type="string">
+			<column name="CREATOR" />
+		</property>
+		<property name="createDate" type="timestamp">
+			<column name="CREATE_DATE" />
+		</property>
+		<property name="preStationId" type="string">
+			<column name="PRE_STATION_ID" />
+		</property>
+		<property name="oilengineId" type="string">
+			<column name="OILENGINE_ID" />
+		</property>
+		<property name="dispatchTime" type="timestamp">
+			<column name="DISPATCH_TIME" />
+		</property>
+		<property name="yardMan" type="string">
+			<column name="YARDMAN" />
+		</property>
+		<property name="dispatchRemark" type="string">
+			<column name="DISPATCH_REMARK" />
+		</property>
+		<property name="offStation" type="string">
+			<column name="OFF_STATION" />
+		</property>
+		<property name="state" type="string">
+			<column name="STATE" />
+		</property>
+		<property name="alarmId" type="string">
+			<column name="OUTAGEALARM_ID" />
+		</property>
+		<property name="replyContent" type="string">
+			<column name="REPLY_CONTENT" />
+		</property>
+		<property name="replyPerson" type="string">
+			<column name="REPLY_PERSON" />
+		</property>
+		<property name="replyDate" type="timestamp">
+			<column name="REPLY_DATE" />
+		</property>
+		<property name="taskCode" type="string">
+			<column name="TASK_CODE" />
+		</property>
+		<property name="handleLimit" type="timestamp">
+			<column name="HANDLE_LIMIT" />
+		</property>
+		<property name="serviceRegion" type="string">
+			<column name="SERVICE_REGION" />
+		</property>
+		<property name="acceptLimit" type="timestamp">
+			<column name="ACCEPT_LIMIT" />
+		</property>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 考核模块   EXCEL导出配置 -->
+<items> 
+    <export>
+    	 <excel key="assess_examination_list" name="检查记录列表 " dataService="assessExaminationServiceImpl">
+    		<column name="现场检查表" datakey="TABLE_NAME" ></column>
+    		<column name="代维公司" datakey="ORGNAME" ></column>
+    		<column name="检查站点" datakey="ZYMC" ></column>
+    		<column name="站点类型" datakey="LABLE" ></column>
+    		<column name="检查人" datakey="USERNAME" ></column>
+    		<column name="检查时间" datakey="INSPECTION_DATE" ></column>
+    		<column name="扣分" datakey="SCORE" ></column>
+    	 </excel>
+    	 <excel key="assess_appealform_list" name="申诉列表 " dataService="assessAppealFormServiceImpl">
+    		<column name="考核表名称" datakey="TABLE_NAME" ></column>
+    		<column name="考核月份" datakey="APPRAISE_MONTH" ></column>
+    		<column name="考核成绩" datakey="SCORE" ></column>
+    		<column name="区域" datakey="REGIONNAME" ></column>
+    		<column name="代维公司" datakey="ORGNAME" ></column>
+    		<column name="检查时间" datakey="INSPECTION_DATE" ></column>
+    		<column name="申诉原因" datakey="CAUSE" ></column>
+    		<column name="申诉人" datakey="USERNAME" ></column>
+    		<column name="申诉时间" datakey="APPEAL_TIME" ></column>
+    	 </excel>
+    	<excel key="assess_examination_summary" name="现场检查汇总列表 " dataService="assessExaminationServiceImpl">
+    		<column name="地市" datakey="CITY" rowspan="true"></column>
+    		<column name="代维公司" datakey="CONTRACTOR" rowspan="true"></column>
+    		<column name="县区" datakey="COUNTY" ></column>
+    		<column name="站点数" datakey="NUB" ></column>
+    		<column name="扣分" datakey="SCORE" ></column>
+    	 </excel> 
+    	 <excel key="assess_monthsummary_list" name="月度考核汇总列表 " dataService="assessExaminationServiceImpl">
+    		<column name="区域" datakey="REGIONNAME" rowspan="true"></column>
+    		<column name="代维公司" datakey="ORGNAME" rowspan="true"></column>
+    		<column name="维护专业" datakey="BUSINESSTYPENAME" ></column>
+    		<column name="考核成绩" datakey="SCORE" ></column>
+    	 </excel>
+    	 <excel key="assess_monthrank_list" name="月度考核排名列表 " dataService="assessExaminationServiceImpl">
+    		<column name="区域" datakey="REGIONNAME" rowspan="true"></column>
+    		<column name="排名" datakey="PM"></column>
+    		<column name="代维公司" datakey="ORGNAME"></column>
+    		<column name="考核成绩" datakey="SCORE" ></column>
+    	 </excel> 
+    </export>
+</items>

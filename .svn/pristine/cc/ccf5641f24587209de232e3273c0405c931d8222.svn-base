@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.cabletech.business.sysmanager.model.RemindTimeConfigure"
+		table="REMIND_TIME_CONFIGURE">
+		<id name="id" type="string">
+			<column name="ID" length="40" />
+			<generator class="com.cabletech.common.util.StrSequenceGenerator">
+				<param name="sequence">SEQ_RemindTimeConfigure_ID</param>
+				<param name="length">40</param>
+			</generator>
+		</id>
+		<property name="workorderType" type="string">
+			<column name="WORKORDER_TYPE" length="12"  />
+		</property>
+		<property name="smsType" type="string">
+			<column name="SMS_TYPE" length="12" />
+		</property>
+		<property name="professionType" type="string">
+			<column name="PROFESSION_TYPE" length="12" />
+		</property>
+		<property name="timeoutNum" type="integer">
+			<column name="TIMEOUT_NUM"/>
+		</property>
+	</class>
+</hibernate-mapping>

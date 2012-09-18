@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+	http://www.springframework.org/schema/tx
+	http://www.springframework.org/schema/tx/spring-tx-3.1.xsd
+	http://www.springframework.org/schema/jee
+	http://www.springframework.org/schema/jee/spring-jee-3.1.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+	<description>Spring公共配置文件</description>
+	<!-- 数据源配置文件 -->
+	<import resource="applicationContext-datasource.xml" />
+	<!-- 使用annotation 自动注册bean,并保证@Required,@Autowired的属性被注入 -->
+	<context:component-scan base-package="com.cabletech.*" />
+	<!-- 获取外部资源接口配置 包括：通用权限、基础资料、流程服务等 -->
+	<import resource="applicationContext-extresources.xml" />
+	<!-- 获取外部资源接口配置 包括：通用权限、基础资料、流程服务等 -->
+	<import resource="applicationContext-baseinfo.xml" />
+	<!-- 添加解析XML文件的Bean -->
+	<import resource="applicationContext-parsexml.xml" />
+	<!-- 工作流服务Bean -->
+	<import resource="applicationContext-workflow.xml" />
+	<!-- 工单辅助提醒定时任务配置 
+	<import resource="applicationContext-quartz.xml" />  --> 
+	<!-- Webservice服务Bean -->
+	<import resource="applicationContext-webservice.xml" />
+	<!-- 载入JMS -->
+ 	<import resource="classpath:/applicationContext-jms.xml" />
+ 	<import resource="classpath:/applicationContext-jms-sender.xml" />
+ 	<!-- 工作流服务Bean -->
+	<import resource="applicationContext-workflow.xml" />
+	<!-- 全局配置参数Bean -->
+	<bean id="globeConfigParameter" class="com.cabletech.common.config.GlobeConfigParameter">
+		<property name="eomsSwitch" value="${eoms.switch}" />
+		<property name="eomsUrl" value="${eoms.url}" />
+		<property name="webGisDeployname" value="${webgis.deployname}" />
+	</bean> 
+</beans>

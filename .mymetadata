@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="bspweb"
+  id="myeclipse.1332989129024"
+  context-root="/nbspweb"
+  j2ee-spec="5.0"
+  archive="bspweb.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebApp" />
+  </attributes>
+</project-module>
+

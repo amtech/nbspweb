@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.cabletech.business.notice.model.NoticeSendEE"
+		table="NOTICE_SENDEE">
+		<composite-id>
+			<key-property name="personid" column="PERSON_ID" type="string"></key-property>
+			<key-property name="noticeid" column="NOTICE_ID" type="string"></key-property>
+		</composite-id>
+		<property name="isread" type="string">
+			<column name="IS_READ" />
+		</property>
+	</class>
+</hibernate-mapping>

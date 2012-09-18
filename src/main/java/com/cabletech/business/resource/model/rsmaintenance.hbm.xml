@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2010-7-13 16:52:49 by Hibernate Tools 3.3.0.GA -->
+<hibernate-mapping>
+	<class name="com.cabletech.business.resource.model.RsMaintenance"
+		table="RES_MAINTENANCE">
+		<id name="id" type="string">
+			<column name="ID" length="10" />
+			<generator class="com.cabletech.common.util.StrSequenceGenerator">
+				<param name="sequence">SEQ_RS_MAINTENANCE_ID</param>
+				<param name="length">10</param>
+			</generator>
+		</id>
+		<property name="maintenanceId" type="string">
+			<column name="MAINTENANCE_ID" />
+		</property>
+		<property name="patrolGroupId" type="string">
+			<column name="PATROL_GROUP_ID" />
+		</property>
+		<property name="rsId" type="string">
+			<column name="RS_ID" length="12" />
+		</property>
+		<property name="rsType" type="string">
+			<column name="RS_TYPE" length="30" />
+		</property>
+	</class>
+</hibernate-mapping>

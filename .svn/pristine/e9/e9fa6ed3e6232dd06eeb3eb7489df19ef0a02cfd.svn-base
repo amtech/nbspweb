@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root id="otherItemImport"
+	entity="com.cabletech.business.monthcost.model.MonthOtherCostTemp"> 
+	<column id="months" property-name="months" col-index="1"></column>
+	<column id="contractorId" property-name="contractorId"
+		col-index="2"></column>
+	<column id="typet" property-name="typet" col-index="3"></column>
+	<column id="shouldMoney" property-name="shouldMoney" col-index="4"></column>
+	<column id="factMoney" property-name="factMoney" col-index="5"></column>
+	<column id="remark" property-name="remark" col-index="6"></column>
+</root>

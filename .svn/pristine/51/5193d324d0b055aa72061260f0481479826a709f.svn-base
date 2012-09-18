@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- BASEINFOCLIENT 属性配置 -->
+<!-- 巡检计划模块   EXCEL导出配置 -->
+<items> 
+    <export>
+    	 <excel key="listWplanTemplate" name="计划模板列表" dataService="wplanTemplateServiceImpl">
+    		<column name="专业" datakey="BUSINESSTYPENAME" ></column>
+    		<column name="所属区域" datakey="REGIONNAME" ></column>
+    		<column name="模板名称" datakey="TEMPLATE_NAME" ></column>
+    		<column name="备注" datakey="REMARK" ></column>
+    	 </excel>
+    	 <excel key="listpatrolitems" name="巡检项信息列表" dataService="patrolSubItemServiceImpl">
+    		<column name="维护对象" datakey="ITEMNAME" ></column>
+    		<column name="维护检测项目" datakey="SUBITEM_NAME" ></column>
+    		<column name="周期" datakey="CYCLE" constantName="listpatrolitemscyc" ></column>
+    		<column name="质量标准" datakey="QUALITY_STANDARD" ></column>
+    		<column name="输入类型" datakey="INPUT_TYPE" constantName="listpatrolitemsinput" ></column>
+    		<column name="值域范围" datakey="VALUE_SCOPE" ></column>
+    		<column name="异常状态" datakey="EXCEPTION_VALUE" ></column>
+    		<column name="默认值" datakey="DEFAULT_VALUE" ></column>
+    	 </excel>
+    	 <excel key="patrolinfoexecuteschedulelist" name="计划执行进度列表" dataService="patrolinfoExecuteServiceImpl">
+    		<column name="计划名称" datakey="PLAN_NAME" ></column>
+    		<column name="所属区域" datakey="REGIONNAME" ></column>
+    		<column name="所属代维" datakey="ORGNAME" ></column>
+    		<column name="所属巡检组" datakey="PATROLGROUPNAME" ></column>
+    		<column name="计划开始时间" datakey="START_TIME" ></column>
+    		<column name="计划结束时间" datakey="END_TIME" ></column>
+    		<column name="计划巡检数" datakey="PATROLCOUNT" ></column>
+    		<column name="异常巡检数" datakey="EXCEPTIONCOUNT" ></column>
+    		<column name="已巡检数" datakey="ENDPATROLCOUNT" ></column>
+    		<column name="未巡检数" datakey="NOPATROLCOUNT" ></column>
+    		<column name="巡检完成率" datakey="PLANRATE" ></column>
+    	 </excel>
+    	 <excel key="patrolinfoexecuteresultlist" name="计划执行结果列表" dataService="patrolinfoExecuteServiceImpl">
+    		<column name="计划名称" datakey="PLAN_NAME" ></column>
+    		<column name="所属区域" datakey="REGIONNAME" ></column>
+    		<column name="所属代维" datakey="ORGNAME" ></column>
+    		<column name="所属巡检组" datakey="PATROLGROUPNAME" ></column>
+    		<column name="计划开始时间" datakey="START_TIME" ></column>
+    		<column name="计划结束时间" datakey="END_TIME" ></column>
+    		<column name="计划巡检数" datakey="PATROLCOUNT" ></column>
+    		<column name="异常巡检数" datakey="EXCEPTIONCOUNT" ></column>
+    		<column name="已巡检数" datakey="ENDPATROLCOUNT" ></column>
+    		<column name="未巡检数" datakey="NOPATROLCOUNT" ></column>
+    		<column name="巡检完成率" datakey="PLANRATE" ></column>
+    	 </excel>
+    	 <excel key="patrolinfowaithandledlist" name="待办工作" dataService="patrolinfoServiceImpl">
+    		<column name="计划名称" datakey="PLAN_NAME" ></column>
+    		<column name="所属区域" datakey="REGIONNAME" ></column>
+    		<column name="所属代维" datakey="ORGNAME" ></column>
+    		<column name="所属巡检组" datakey="PATROLGROUPNAME" ></column>
+    		<column name="计划类型" datakey="PLAN_TYPE" constantName="patrolinfotype" ></column>
+    		<column name="计划制定人" datakey="CREATERNAME" ></column>
+    		<column name="计划制定时间" datakey="CREATETIME_DIS" ></column>
+    		<column name="计划状态" datakey="PLAN_STATE" constantName="patrolinfostate" ></column>
+    	 </excel>
+    	 <excel key="patrolinfolist" name="巡检计划列表" dataService="patrolinfoServiceImpl">
+    		<column name="计划名称" datakey="PLAN_NAME" ></column>
+    		<column name="所属区域" datakey="REGIONNAME" ></column>
+    		<column name="所属代维" datakey="ORGNAME" ></column>
+    		<column name="所属巡检组" datakey="PATROLGROUPNAME" ></column>
+    		<column name="计划类型" datakey="PLAN_TYPE" constantName="patrolinfotype" ></column>
+    		<column name="计划制定人" datakey="CREATERNAME" ></column>
+    		<column name="计划制定时间" datakey="CREATETIME_DIS" ></column>
+    		<column name="计划状态" datakey="PLAN_STATE" constantName="patrolinfostate" ></column>
+    	 </excel>
+    	 <excel key="patrolinfooverresourcelist" name="已巡检计划明细" dataService="patrolinfoExecuteServiceImpl">
+    		<column name="资源名称" datakey="RS_NAME" ></column>
+    		<column name="资源类型" datakey="RESOURCE_TYPENAME" ></column>
+    		<column name="巡检人" datakey="PATROLMANNAME" ></column>
+    		<column name="到达时间" datakey="ARRIVE_TIME" ></column>
+    		<column name="开始巡检时间" datakey="START_TIME" ></column>
+    		<column name="结束巡检时间" datakey="END_TIME" ></column>
+    		<column name="巡检时长" datakey="TIMEDIFF" ></column>
+    		<column name="异常项数" datakey="EXCEPTIONCOUNT" ></column>
+    	 </excel>
+    	 <excel key="patrolinfoitemdetaillist" name="巡检表明细" dataService="patrolinfoExecuteServiceImpl">
+    		<column name="巡检对象" datakey="ITEM_NAME" ></column>
+    		<column name="巡检项目" datakey="SUBITEM_NAME" ></column>
+    		<column name="巡检结果" datakey="SUBITEM_PATROL" ></column>
+    		<column name="巡检描述" datakey="EXCEPTION_DESC" ></column>
+    		<column name="是否异常" datakey="CHECKED" constantName="patrolinfoitemstate" ></column>
+    	 </excel>
+    	 
+    	 <!-- 常量配置 -->
+    	 <constant name="listpatrolitemsinput">
+    	 	<item key="NUM" value="数值"></item>
+    		<item key="TEXT" value="文本"></item>
+    		<item key="CHOOSE" value="单选"></item>
+    		<item key="GROUP" value="多选"></item>
+    		<item key="BATTERY" value="蓄电池测试"></item>
+    		<item key="STATION_ANTENNA" value="天线测量"></item>
+    		<item key="INDOOR_COVERAGE" value="天线信号测试"></item>
+    		<item key="WLAN" value="WLAN天线信号测试"></item>
+    		<item key="default" value="未定义"></item>
+    	 </constant>
+    	 
+    	 <constant name="listpatrolitemscyc">
+    	 	<item key="year" value="年"></item>
+    		<item key="quarter" value="季"></item>
+    		<item key="month" value="月"></item>
+    		<item key="week" value="周"></item>
+    		<item key="default" value="自定义"></item>
+    	 </constant>
+    	 
+    	 <constant name="patrolinfotype">
+    	 	<item key="1" value="年度"></item>
+    		<item key="2" value="季度"></item>
+    		<item key="3" value="月度"></item>
+			<item key="default" value="自定义"></item>
+    	 </constant>
+    	 
+    	 <constant name="patrolinfostate">
+    	 	<item key="02" value="待审核"></item>
+    		<item key="03" value="已审核"></item>
+    		<item key="04" value="未通过"></item>
+			<item key="default" value="未提交"></item>
+    	 </constant> 
+    	 
+    	 <constant name="patrolinfoitemstate">
+    	 	<item key="0" value="正常"></item>
+    		<item key="default" value="异常"></item>
+    	 </constant>  
+    </export>
+</items>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping
+    PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.cabletech.business.base.model.CodeSequence"
+		table="CODE_SEQUENCE">
+		<id name="id" type="string" unsaved-value="null">
+			<column name="id" sql-type="char(12)" not-null="true" />
+			<generator class="com.cabletech.common.util.StrSequenceGenerator">
+				<param name="sequence">SEQ_CODE_SEQUENCE_ID</param>
+				<param name="length">12</param>
+			</generator>
+		</id>
+		<property name="tableName" column="TABLE_NAME" />
+		<property name="deptId" column="DEPT_ID" />
+		<property name="deptShort" column="DEPT_SHORT" />
+		<property name="yearMonth" column="YEAR_MONTH" />
+		<property name="maxId" column="MAX_ID" />
+		<property name="pattern" column="PATTERN" />
+		<property name="remark" column="REMARK" />
+	</class>
+</hibernate-mapping>

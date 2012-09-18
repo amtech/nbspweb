@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping
+    PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class
+		name="com.cabletech.business.workflow.workorder.model.WorkCommonOrder"
+		table="WTASK_COMMONORDER">
+		<!-- A 32 hex character is our surrogate key. It's automatically generated 
+			by Hibernate with the UUID pattern. -->
+		<id name="id" type="string" unsaved-value="null">
+			<column name="id" sql-type="char(32)" not-null="true" />
+			<generator class="com.cabletech.common.util.StrSequenceGenerator">
+				<param name="sequence">SEQ_WTASK_COMMONORDER_ID</param>
+				<param name="length">12</param>
+			</generator>
+		</id>
+		<property name="taskName" column="TASK_NAME" type="string" />
+		<property name="taskRequest" column="TASK_REQUEST" type="string" />
+	</class>
+</hibernate-mapping>

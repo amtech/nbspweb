@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.cabletech.business.workflow.fault.model.WTroubleEoms"
+		table="WTROUBLE_EOMS">
+		<id name="eomsid" type="string">
+			<column name="EOMSID" length="254" />
+		</id>
+		<property name="title" type="string">
+			<column name="title" />
+		</property>
+		<property name="networktype" type="string">
+			<column name="networktype" />
+		</property>
+		<property name="isaffectbusiness" type="string">
+			<column name="isaffectbusiness" />
+		</property>
+		<property name="affectbusinesstype" type="string">
+			<column name="affectbusinesstype" />
+		</property>
+		<property name="happentime" type="timestamp">
+			<column name="happentime" />
+		</property>
+		<property name="responselevel" type="string">
+			<column name="responselevel" />
+		</property>
+		<property name="acceptedtime" type="timestamp">
+			<column name="acceptedtime" />
+		</property>
+		<property name="processtime" type="timestamp">
+			<column name="processtime" />
+		</property>
+		<property name="alarmlevel" type="string">
+			<column name="alarmlevel" />
+		</property>
+		<property name="processtimet1" type="timestamp">
+			<column name="processtimet1" />
+		</property>
+		<property name="processtimet2" type="timestamp">
+			<column name="processtimet2" />
+		</property>
+		<property name="processtimet3" type="timestamp">
+			<column name="processtimet3" />
+		</property>
+		<property name="regionid" type="string">
+			<column name="regionid" />
+		</property>
+		<property name="findtype" type="string">
+			<column name="findtype" />
+		</property>
+		<property name="networkelementname" type="string">
+			<column name="networkelementname" />
+		</property>
+		<property name="equipmentcompany" type="string">
+			<column name="equipmentcompany" />
+		</property>
+		<property name="equipmenttype" type="string">
+			<column name="equipmenttype" />
+		</property>
+		<property name="equipmentmodel" type="string">
+			<column name="equipmentmodel" />
+		</property>
+		<property name="alarmserial" type="string">
+			<column name="alarmserial" />
+		</property>
+		<property name="nmalarmid" type="string">
+			<column name="nmalarmid" />
+		</property>
+		<property name="alarmstatus" type="string">
+			<column name="alarmstatus" />
+		</property>
+		<property name="alarmcleartime" type="timestamp">
+			<column name="alarmcleartime" />
+		</property>
+		<property name="alarmlogictype" type="string">
+			<column name="alarmlogictype" />
+		</property>
+		<property name="alarmlogicsubtype" type="string">
+			<column name="alarmlogicsubtype" />
+		</property>
+		<property name="alarmsource" type="string">
+			<column name="alarmsource" />
+		</property>
+		<property name="complaintsorder" type="string">
+			<column name="complaintsorder" />
+		</property>
+		<property name="alarmoldcode" type="string">
+			<column name="alarmoldcode" />
+		</property>
+		<property name="sendcontact" type="string">
+			<column name="sendcontact" />
+		</property>
+		<property name="alarmdesc" type="string">
+			<column name="alarmdesc" />
+		</property>
+		<property name="incendnettype" type="string">
+			<column name="inc_endnettype" />
+		</property>
+		<property name="incendequipment" type="string">
+			<column name="inc_endequipment" />
+		</property>
+		<property name="incisimportantincident" type="string">
+			<column name="inc_isimportantincident" />
+		</property>
+	</class>
+</hibernate-mapping>

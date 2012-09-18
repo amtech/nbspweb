@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.cabletech.business.ah.familyband.model.AhFamilyBandTrouble" table="ah_familyband_trouble">
+		<id name="id" type="string" column="id" >
+			<generator
+				class="com.cabletech.common.util.StrSequenceGenerator">
+				<param name="sequence">SEQ_WPLAN_ID</param>
+				<param name="length">12</param>
+			</generator>
+		</id>
+		<property name="recodeId" column="recodeid" />
+		<property name="deviceType" column="devicetype" />
+		<property name="position" column="position" />
+		<property name="remark" column="remark" />
+		<property name="expectEndTime" column="expectendtime" type="java.util.Date"/>
+		<property name="status" column="status" />
+		<property name="handleTime" column="handletime"  type="java.util.Date"/>
+		<property name="handleRemark" column="handleremark" />
+		<property name="handleResult" column="handleresult" />
+		<property name="registeryserId" column="registeryserid" />
+		<property name="registerTime" column="registertime" type="java.util.Date" />
+		<property name="ordernumber" column="ordernumber" />
+	</class>
+</hibernate-mapping>

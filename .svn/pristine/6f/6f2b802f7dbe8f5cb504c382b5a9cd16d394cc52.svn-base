@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- BASEINFOCLIENT 属性配置 -->
+<!--通用工单模块   EXCEL导出配置 -->
+<items> 
+    <export>
+    	<excel key="workorder_waithandled_list" name="通用工单待办工作列表 " dataService="workOrderWaitHandledServiceImpl">
+    		<column name="工单标题" datakey="TASK_NAME"></column>
+    		<column name="工单号" datakey="TASK_CODE"></column>
+    		<column name="现场处理人" datakey="TARGET_PRINCIPAL_NAME"></column>
+    		<column name="处理时限" datakey="OVERTIME_SET_DIS"></column>
+    		<column name="工单类型" datakey="TASK_TYPE_DIS"></column>
+    		<column name="派单时间" datakey="CREATE_DATE_DIS"></column>
+    		<column name="状态" datakey="PROINST_STATE"></column>
+    	</excel>
+    	<excel key="workorder_handled_list" name="通用工单已办工作列表 " dataService="workOrderHandledServiceImpl">
+    		<column name="工单标题" datakey="TASK_NAME"></column>
+    		<column name="工单号" datakey="TASK_CODE"></column>
+    		<column name="现场处理人" datakey="TARGET_PRINCIPAL_NAME"></column>
+    		<column name="处理时限" datakey="OVERTIME_SET_DIS"></column>
+    		<column name="工单类型" datakey="TASK_TYPE_DIS"></column>
+    		<column name="派单时间" datakey="CREATE_DATE_DIS"></column>
+    		<column name="状态" datakey="TASK_STATE" constantName="workordertaskstate"></column>
+    	</excel>
+    	<excel key="workorder_waitcanceled_list" name="通用工单待取消工作列表 " dataService="workOrderCancelServiceImpl">
+    		<column name="工单标题" datakey="TASK_NAME"></column>
+    		<column name="工单号" datakey="TASK_CODE"></column>
+    		<column name="现场处理人" datakey="TARGET_PRINCIPAL_NAME"></column>
+    		<column name="处理时限" datakey="OVERTIME_SET_DIS"></column>
+    		<column name="工单类型" datakey="TASK_TYPE_DIS"></column>
+    		<column name="派单时间" datakey="CREATE_DATE_DIS"></column>
+    		<column name="状态" datakey="TASK_STATE" constantName="workordertaskstate"></column>
+    	</excel>
+    	<excel key="workorder_canceled_list" name="通用工单已取消工作列表 " dataService="workOrderCancelServiceImpl">
+    		<column name="工单标题" datakey="TASK_NAME"></column>
+    		<column name="工单号" datakey="TASK_CODE"></column>
+    		<column name="现场处理人" datakey="TARGET_PRINCIPAL_NAME"></column>
+    		<column name="处理时限" datakey="OVERTIME_SET_DIS"></column>
+    		<column name="工单类型" datakey="TASK_TYPE_DIS"></column>
+    		<column name="派单时间" datakey="CREATE_DATE_DIS"></column>
+    		<column name="状态" datakey="TASK_STATE" constantName="workordertaskstate"></column>
+    	</excel>
+    	<excel key="workorder_waitdeleted_list" name="通用工单待删除工作列表 " dataService="workOrderWaitDeletedServiceImpl">
+    		<column name="工单标题" datakey="TASK_NAME"></column>
+    		<column name="工单号" datakey="TASK_CODE"></column>
+    		<column name="现场处理人" datakey="TARGET_PRINCIPAL_NAME"></column>
+    		<column name="处理时限" datakey="OVERTIME_SET_DIS"></column>
+    		<column name="工单类型" datakey="TASK_TYPE_DIS"></column>
+    		<column name="派单时间" datakey="CREATE_DATE_DIS"></column>
+    		<column name="状态" datakey="TASK_STATE" constantName="workordertaskstate"></column>
+    	</excel>
+    	<excel key="workorder_draft_list" name="通用工单草稿箱列表 " dataService="workOrderDraftServiceImpl">
+    		<column name="工单标题" datakey="TASK_NAME"></column>
+    		<column name="工单号" datakey="TASK_CODE"></column>
+    		<column name="处理时限" datakey="OVERTIME_SET_DIS"></column>
+    		<column name="工单类型" datakey="TASK_TYPE_DIS"></column>
+    		<column name="派单人" datakey="CREATER_NAME"></column>
+    		<column name="派单时间" datakey="CREATE_DATE_DIS"></column>
+    	</excel>
+    	<!-- 常量 -->
+    	 <constant name="workordertaskstate">
+    	 	<item key="0" value="草稿"></item>
+    		<item key="2" value="签收"></item>
+    		<item key="3" value="回单"></item>
+    		<item key="4" value="验证审核"></item>
+    		<item key="5" value="结束"></item>
+    		<item key="6" value="已取消"></item>
+    		<item key="a" value="退单"></item>
+    		<item key="b" value="退单审核"></item>
+    	 </constant> 
+    </export>
+</items>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root id="invalidPatrolItemExport" excel-title="不合法的导入巡检项列表"
+	entity="com.cabletech.common.excel.exports.EntityValueGenerator">
+	<style id="redFontStyle">
+		<font font-color="10"></font>
+	</style>
+	<column id="itemName" subject="维护对象 " property-name="itemName"
+		col-index="0"></column>
+	<column id="subitemName" subject="维护检测项目 " property-name="subitemName"
+		col-index="1"></column>
+	<column id="cycleText" subject="周期 " property-name="cycleText"
+		col-index="2"></column>
+	<column id="qualityStandard" subject="质量标准 " property-name="qualityStandard"
+		col-index="3"></column>
+	<column id="inputTypeText" subject="输入类型 " property-name="inputTypeText"
+		col-index="4"></column>
+	<column id="valueScope" subject="值域范围" property-name="valueScope"
+		col-index="5"></column>
+	<column id="exceptionValue" subject="异常状态 " property-name="exceptionValue"
+		col-index="6"></column>
+	<column id="defaultValue" subject="默认值 " property-name="defaultValue"
+		col-index="7"></column>
+	<column id="errorMsg" subject="错误信息" property-name="errorMsg"
+		col-index="8" style-id="redFontStyle"></column>
+</root>

@@ -1,0 +1,259 @@
+* {
+	margin: 0px auto;
+	padding: 0px;
+}
+
+body {
+	margin: 0px auto;
+	padding: 0px;
+	background-color: #E0EBED;
+	overflow: hidden;
+	height: 100%
+}
+
+html,body {
+	font-size: 12px;
+}
+
+.ui-login {
+	width: 1003px;
+	height: auto;
+}
+
+.ui-login-system-name {
+	width: 742px;
+	margin: 0px auto;
+	_margin: 0px auto;
+	padding: 0px;
+	height: 50px;
+	line-height: 50px;
+	margin-top: 30px;
+	_margin-top: 30px;
+	font-weight: bold;
+	font-size: 24px;
+}
+
+.ui-login-picimg {
+	width: 747px;
+	height: 392px;
+	background-image: url(image/login_pic_img.jpg);
+	margin: 0px auto;
+	_margin: 0px auto;
+	border: 0px #75B0F6 solid;
+}
+
+.ui-login-banner {
+	width: 747px;
+	height: 32px;
+	background-image: url(image/ui-login-banner.jpg);
+}
+
+.ui-login-text {
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	font-size: 12px;
+	color: #6B6B6B;
+	text-align: center;
+}
+
+.ui-login-pic {
+	width: 228px;
+	height: 81px;
+	background-image: url(image/login_pic.png);
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='image/login_pic.png',sizingMethod='image'); 
+	position: absolute;
+	top: 415px;
+	left: 25%
+}
+
+.ui-login-input-layout {
+	width: 520px;
+	margin: 0 auto;
+	height: 32px;
+	line-height: 32px;
+	color: #FFF;
+	font-weight: bold;
+}
+
+.ui-login-input {
+	width: 120px;
+	height: 18px;
+	line-height: 18px;
+	border: 1px #4B96F1 solid;
+	background-image: url(image/input_bg.jpg);
+	padding-left: 5px;
+}
+
+.ui-login-input:focus {
+	background: #FFFFFF;
+	padding-left: 5px;
+}
+
+.ui-login-but {
+	cursor: pointer;
+	width: 56px;
+	height: 23px;
+	line-height: 23px;
+	background-image: url(image/logoin_but.jpg);
+	border: 0px;
+	margin-left: 5px;
+	_margin-left: 5px;
+	color: #FFF;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.header {
+	width: 100%;
+	height: 105px;
+	position: absolute;
+}
+
+.header .top_frame {
+	width: 100%;
+	height: 74px;
+	background-image: url(image/top_bg.jpg);
+	position: absolute;
+}
+
+.header .top_left {
+	background-image: url(image/top_bg.jpg);
+	width: 514px;
+	height: 74px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+
+.header .logo {
+	background-image: url(image/logo.png);
+	background-repeat:no-repeat;
+	width: 142px;
+	height: 56px;
+	position: absolute;
+	left: 10px;
+	top: 15px;
+}
+
+.header .System_Name {
+	width: 500px;
+	line-height: 50px;
+	font-size: 24px;
+	color: #FFF;
+	position: absolute;
+	left: 160px;
+	top: 20px;
+	font-family: "Microsoft YaHei","宋体",monospace !important;
+	font-weight: bolder;
+}
+
+.top_textbg {
+	background-image: url(image/top_right.jpg);
+	width: 442px;
+	height: 74px;
+	position: absolute;
+	right: 0px;
+	z-index: 0
+}
+
+.Login_Information {
+	width: 300px;
+	height: 15px;
+	position: absolute;
+	right: 5%;
+	text-align: right;
+	top: 55px;
+	color: #fff;
+}
+
+.Login_Information a {
+	text-decoration: none;
+	color: #fff
+}
+
+.banner {
+	width: 100%;
+	height: 31px;
+	position: absolute;
+	top: 74px;
+}
+
+#nav {
+	padding: 0;
+	padding-left: 15px;
+	margin: 0;
+	_margin: 0;
+	list-style: none;
+	height: 31px;
+	_height: 31px;
+	background: #fff url(image/three_0.gif) repeat-x;
+	position: relative;
+
+}
+
+#nav li.top {
+	display: block;
+	_display:inline-block;
+	float: left;
+	height: 31px;
+}
+
+#nav li a.top_link {
+	display: block;
+	_display:inline-block;
+	float: left;
+	height: 31px;
+	line-height: 31px;
+	_line-height: 31px;
+	color: #fff;
+	text-decoration: none;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 0 0 0 6px;
+	cursor: pointer
+}
+
+#nav li a.top_link span {
+	float: left;
+	display: block;
+	padding: 0 10px 0 10px;
+	height: 31px;
+	_height: 31px;
+}
+
+#nav li .selected {
+	height: 31px;
+	background: #fff url(image/selected.png) repeat-x
+}
+
+.maincontent {
+	position: absolute;
+	width: 100%;
+	overflow: hidden;
+	left: 0px;
+	top: 105px;
+	zoom:1
+}
+
+.bottom {
+	width: 100%;
+	height: 26px;
+	position: absolute;
+	bottom: 0px;
+	background-color: #529CF3
+}
+
+.bottom .version {
+	color: #FFFFFF;
+	float: left;
+	line-height: 26px;
+	text-indent: 10px
+}
+
+.bottom .copyright {
+	color: #FFFFFF;
+	float: right;
+	line-height: 26px;
+	padding-right: 10px
+}

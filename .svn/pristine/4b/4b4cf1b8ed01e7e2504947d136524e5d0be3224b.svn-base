@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class
+		name="com.cabletech.business.workflow.electricity.oilengine.model.OilRecord"
+		table="OE_OILRECORD">
+		<id name="id" type="string">
+			<column name="ID" length="12" />
+			<generator class="com.cabletech.common.util.StrSequenceGenerator">
+				<param name="sequence">SEQ_OE_OILRECORD_ID</param>
+				<param name="length">12</param>
+			</generator>
+		</id>
+		<property name="oeId" type="string">
+			<column name="OE_ID" />
+		</property>
+		<property name="quantity" type="string">
+			<column name="QUANTITY" />
+		</property>
+		<property name="recordDate" type="timestamp">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="recorder" type="string">
+			<column name="RECORDER" />
+		</property>
+	</class>
+</hibernate-mapping>

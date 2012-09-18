@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- BASEINFOCLIENT 属性配置 -->
+<!-- 质量考核   EXCEL导出配置 -->
+<items> 
+    <export>
+    	 <excel key="onlinelogresult" name="用户在线信息查询列表" dataService="userOnlineLogServiceImpl">
+    		<column name="用户名称" datakey="PERSONID" ></column>
+    		<column name="用户IP" datakey="IP" ></column>
+    		<column name="登录时间" datakey="LOGIN_TIME" ></column>
+    		<column name="登出时间" datakey="LOGOUT_TIME" ></column>
+    		<column name="在线时长" datakey="ONLINE_TIME" ></column>
+    	 </excel>
+    	 <excel key="actionlogresult" name="用户操作信息查询列表" dataService="userActionLogServiceImpl">
+    		<column name="人员名称" datakey="PERSONID" ></column>
+    		<column name="操作时间" datakey="OPERATE_TIME" ></column>
+    		<column name="登录IP" datakey="LOGINIP" ></column>
+    		<column name="操作名称" datakey="RECORDID" ></column>
+    		<column name="操作描述" datakey="METHOD_DESC" ></column>
+    		<column name="操作数据" datakey="RECORD" ></column>
+    	 </excel>
+    </export>
+</items>

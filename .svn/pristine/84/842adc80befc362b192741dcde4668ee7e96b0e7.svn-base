@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2010-7-13 16:52:49 by Hibernate Tools 3.3.0.GA -->
+<hibernate-mapping>
+	<class name="com.cabletech.business.workflow.fault.model.FaultReply" table="WTROUBLE_REPLY">
+		<id name="id" type="string">
+			<column name="ID" length="12" />
+			<generator class="com.cabletech.common.util.StrSequenceGenerator">
+				<param name="sequence">SEQ_WTROUBLE_REPLY_ID</param>
+				<param name="length">12</param>
+			</generator>
+		</id>
+		<property name="taskId" type="string">
+			<column name="TASK_ID" />
+		</property>
+		<property name="equipment" type="string">
+			<column name="EQUIPMENT" />
+		</property>
+		<property name="isGroupbusiness" type="string">
+			<column name="IS_GROUPBUSINESS" />
+		</property>
+		<property name="influenceBusiness" type="string">
+			<column name="INFLUENCE_BUSINESS" />
+		</property>
+		<property name="networkType" type="string">
+			<column name="NETWORK_TYPE" />
+		</property>
+		<property name="phenomena" type="string">
+			<column name="PHENOMENA" />
+		</property>
+		<property name="reason" type="string">
+			<column name="REASON" />
+		</property>
+		<property name="solution" type="string">
+			<column name="SOLUTION" />
+		</property>
+		<property name="leaveBehindProblem" type="string">
+			<column name="LEAVE_BEHIND_PROBLEM" />
+		</property>
+		<property name="creator" type="string">
+			<column name="CREATOR" />
+		</property>
+		<property name="maintenanceId" type="string">
+			<column name="MAINTENANCE_ID" />
+		</property>
+		<property name="replyTime" type="timestamp">
+			<column name="REPLY_TIME" />
+		</property>
+		<property name="faultResult" type="string">
+			<column name="FAULTRESULT" />
+		</property>
+		<property name="faultReasonType" type="string">
+			<column name="FAULTREASONTYPE" />
+		</property>
+		<property name="processMeasure" type="string">
+			<column name="PROCESSMEASURE" />
+		</property>
+		<property name="isSolution" type="string">
+			<column name="ISSOLUTION" />
+		</property>
+		<property name="isCase" type="string">
+			<column name="ISCASE" />
+		</property>
+		<property name="faultClearTime" type="timestamp">
+			<column name="FAULTCLEARTIME" />
+		</property>
+		<property name="businessRenewTime" type="timestamp">
+			<column name="BUSINESSRENEWTIME" />
+		</property>
+		<property name="incEndNettype" type="string">
+			<column name="INC_ENDNETTYPE" />
+		</property>
+		<property name="incEndEquipment" type="string">
+			<column name="INC_ENDEQUIPMENT" />
+		</property>
+		<property name="incIsImportantIncident" type="string">
+			<column name="INC_ISIMPORTANTINCIDENT" />
+		</property>
+		<property name="isChange" type="string">
+			<column name="ISCHANGE" />
+		</property>
+	</class>
+</hibernate-mapping>

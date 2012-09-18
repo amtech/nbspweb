@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.cabletech.business.sysmanager.model.WorkorderControlInfo"
+		table="WORKORDER_CONTROL_INFO">
+		<id name="id" type="string">
+			<column name="ID" length="40" />
+			<generator class="com.cabletech.common.util.StrSequenceGenerator">
+				<param name="sequence">SEQ_GPRS_MO_ID</param>
+				<param name="length">40</param>
+			</generator>
+		</id>
+		<property name="workorderId" type="string">
+			<column name="WORKORDER_ID" length="12" />
+		</property>
+		<property name="workorderType" type="string">
+			<column name="WORKORDER_TYPE" length="12" />
+		</property>		
+		<property name="professionType" type="string">
+			<column name="PROFESSION_TYPE" length="12" />
+		</property>
+		<property name="workorderTitle" type="string">
+			<column name="WORKORDER_TITLE" length="200" />
+		</property>
+		<property name="handleLimit" type="timestamp">
+			<column name="HANDLE_LIMIT" />
+		</property>
+		<property name="handlePersonId" type="string">
+			<column name="HANDLE_PERSONID" length="12">
+			</column>
+		</property>
+		<property name="smsSendFlg" type="string">
+			<column name="SMS_SEND_FLG" length="2" />
+		</property>
+	</class>
+</hibernate-mapping>

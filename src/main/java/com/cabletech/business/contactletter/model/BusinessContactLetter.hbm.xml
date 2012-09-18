@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping
+    PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class 	name="com.cabletech.business.contactletter.model.BusinessContactLetter" table="BUSINESS_CONTACT_LETTER">
+		<id name="id" type="string" unsaved-value="null">
+			<column name="id" sql-type="varchar(12)" not-null="true" />
+			<generator class="com.cabletech.common.util.StrSequenceGenerator">
+				<param name="sequence">SEQ_WORKFLOW_ID</param>
+				<param name="length">12</param>
+			</generator>
+		</id>
+		<property name="title" column="TITLE"/>
+		<property name="releaseContent"  type="text"  update="true" insert="true" />
+		<property name="documentType" column="TYPE" type="string" />
+		<property name="documentNumber" column="DOCUMENTNUMBER" type="string" />
+		<property name="releaseUserId" column="RELEASEUSERID" type="string" />
+		<property name="releaseTime" column="RELEASETIME" type="timestamp" />
+		<property name="isAudit" column="ISAUDIT" type="string" />
+		<property name="auditUserId" column="AUDITUSERID" type="string" />
+		<property name="isEmergency" column="ISEMERGENCY" type="string" />
+		<property name="isSend" column="ISSEND" type="string" />
+		<property name="status" column="STATUS" type="string" />
+		<property name="fileInfo" column="FILEINFO"></property>
+		<property name="expirationTime" column="EXPIRATIONTIME" type="timestamp" />
+		<property name="issuerAreaUserIds" column="ISSUERAREAUSERIDS"
+			type="string" />
+	</class>
+</hibernate-mapping>

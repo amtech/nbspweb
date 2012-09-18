@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root id="patrolItemExport" excel-title="巡检项列表"
+	entity="com.cabletech.common.excel.exports.MapValueGenerator">
+	<constant>
+		<prop id="year">年</prop>
+		<prop id="quarter">季</prop>
+		<prop id="month">月</prop>
+		<prop id="week">周</prop>
+		<prop id="NUM">数值</prop>
+		<prop id="TEXT">文本</prop>
+		<prop id="CHOOSE">单选</prop>
+		<prop id="GROUP">多选</prop>
+		<prop id="BATTERY">蓄电池测试</prop>
+		<prop id="STATION_ANTENNA">天线测量</prop>
+		<prop id="INDOOR_COVERAGE">天线信号测试</prop>
+		<prop id="WLAN">WLAN天线信号测试</prop>
+	</constant>
+	<column id="itemName" subject="维护对象 " property-name="itemname"
+		col-index="0"></column>
+	<column id="subitemName" subject="维护检测项目 " property-name="subitem_name"
+		col-index="1"></column>
+	<column id="cycleText" subject="周期 " property-name="cycle"
+		col-index="2" data-method="getConstantValue"></column>
+	<column id="qualityStandard" subject="质量标准 " property-name="quality_standard"
+		col-index="3"></column>
+	<column id="inputTypeText" subject="输入类型 " property-name="input_type"
+		col-index="4" data-method="getConstantValue"></column>
+	<column id="valueScope" subject="值域范围" property-name="value_scope"
+		col-index="5"></column>
+	<column id="exceptionValue" subject="异常状态 " property-name="exception_value"
+		col-index="6"></column>
+	<column id="defaultValue" subject="默认值 " property-name="default_value"
+		col-index="7"></column>
+</root>

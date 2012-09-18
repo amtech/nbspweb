@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- BASEINFOCLIENT 统一属性配置 -->
+<items> 
+ <!-- EXCEL导出配置 按模块分组 -->
+ <!-- 供电保障模块         -->
+ <include file="baseinfoclient-export-electricity.xml"></include>
+ <!-- 故障派单模块         -->
+ <include file="baseinfoclient-export-fault.xml"></include>
+ <!-- 巡检计划模块         -->
+ <include file="baseinfoclient-export-patrolinfo.xml"></include>
+ <!-- 维修作业模块         -->
+ <include file="baseinfoclient-export-wmaintain.xml"></include>
+ <!-- 质量考核模块        -->
+ <include file="baseinfoclient-export-rating.xml"></include>
+ <!-- 巡检计划模块        -->
+ <include file="baseinfoclient-export-wplan.xml"></include>
+ <!-- 工单模块 -->
+ <include file="baseinfoclient-export-workorder.xml"></include>
+  <!-- 联系函        -->
+ <include file="baseinfoclient-export-contactletter.xml"></include>
+ <!-- 统计分析模块        -->
+ <include file="baseinfoclient-export-analyse.xml"></include>
+ <!-- 考核模块        -->
+ <include file="baseinfoclient-export-assess.xml"></include>
+ <!-- 考核模块        -->
+ <include file="baseinfoclient-export-system.xml"></include>
+</items>

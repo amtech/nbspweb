@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2010-7-13 16:52:49 by Hibernate Tools 3.3.0.GA -->
+<hibernate-mapping>
+	<class name="com.cabletech.business.sysmanager.model.GprsMo"
+		table="GPRS_MO">
+		<id name="keyid" type="string">
+			<column name="KEYID" length="40" />
+			<generator class="com.cabletech.common.util.StrSequenceGenerator">
+				<param name="sequence">SEQ_GPRS_MO_ID</param>
+				<param name="length">40</param>
+			</generator>
+		</id>
+		<property name="deviceid" type="string">
+			<column name="DEVICEID" length="8" />
+		</property>
+		<property name="receivetime" type="timestamp">
+			<column name="RECEIVE_TIME">
+			</column>
+		</property>
+		<property name="content" type="string">
+			<column name="CONTENT" length="2000" />
+		</property>
+		<property name="state" type="integer">
+			<column name="STATE"/>
+		</property>
+		<property name="sessionkey" type="string">
+			<column name="SESSION_KEY" length="50">
+			</column>
+		</property>
+		<property name="commandid" type="string">
+			<column name="COMMAND_ID" length="4" />
+		</property>
+		<property name="imei" type="string">
+			<column name="IMEI" length="16"></column>
+		</property>
+	</class>
+</hibernate-mapping>

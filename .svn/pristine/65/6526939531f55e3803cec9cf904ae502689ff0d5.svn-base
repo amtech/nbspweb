@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2010-7-13 16:52:49 by Hibernate Tools 3.3.0.GA -->
+<hibernate-mapping>
+	<class name="com.cabletech.business.ah.rating.model.ContractorSelfRating" table="AH_MONTHRESULT">
+		<id name="id" type="string">
+			<column name="ID" length="12" />
+			<generator class="com.cabletech.common.util.StrSequenceGenerator">
+				<param name="sequence">SEQ_RATING_ID</param>
+				<param name="length">12</param>
+			</generator>
+		</id>
+		<property name="tableid" type="string">
+			<column name="table_id" />
+		</property>
+		<property name="personid" type="string">
+			<column name="person_id" />
+		</property>
+		<property name="yearmonth" type="date">
+			<column name="year_month" />
+		</property>
+		<property name="position" type="string">
+			<column name="position" />
+		</property>
+		<property name="isexam" type="string">
+			<column name="is_exam" />
+		</property>
+		<property name="selfassenum" type="string">
+			<column name="self_asse_num" />
+		</property>
+		<property name="examassenum" type="string">
+			<column name="exam_asse_num" />
+		</property>
+		<property name="remark" type="string">
+			<column name="remark" />
+		</property>
+		<property name="examdate" type="timestamp">
+			<column name="exam_date" />
+		</property>
+		<property name="examiner" type="string">
+			<column name="examiner" />
+		</property>
+		<property name="flowstate" type="string">
+			<column name="flow_state" />
+		</property>
+	</class>
+</hibernate-mapping>

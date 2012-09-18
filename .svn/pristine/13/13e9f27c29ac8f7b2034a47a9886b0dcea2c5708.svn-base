@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class
+		name="com.cabletech.business.workflow.wmaintain.model.WMaintainResult"
+		table="WMAINTAIN_RESULT">
+		<id name="id" type="string">
+			<column name="ID" length="12" />
+			<generator class="com.cabletech.common.util.StrSequenceGenerator">
+				<param name="sequence">SEQ_WMAINTAIN_RESULT_ID</param>
+				<param name="length">12</param>
+			</generator>
+		</id>
+		<property name="patrolRecordId" type="string">
+			<column name="PATROLRECORD_ID" />
+		</property>
+		<property name="itemId" type="string">
+			<column name="ITEM_ID" />
+		</property>
+		<property name="maintainId" type="string">
+			<column name="MAINTAIN_ID" />
+		</property>
+		<property name="maintainResult" type="string">
+			<column name="MAINTAIN_RESULT" />
+		</property>
+		<property name="maintainRecord" type="string">
+			<column name="MAINTAIN_RECORD" />
+		</property>
+		<property name="maintainDate" type="timestamp">
+			<column name="MAINTAIN_DATE" />
+		</property>
+		<property name="patrolmanId" type="string">
+			<column name="PATROLMAN_ID" />
+		</property>
+	</class>
+</hibernate-mapping>

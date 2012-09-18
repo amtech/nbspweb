@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root id="groupInputElements">
+	<input-element id="group-common">
+		<![CDATA[
+		<td class='tdulright' colspan="3" style='width:100%;text-align:center;padding:5px;'>
+		<input id='planPatrolTestData.groupSubItemIds' name='planPatrolTestData.groupSubItemIds'
+		 type='hidden' value='#itemId' />
+		#itemInputElement
+		</td>
+		]]>
+	</input-element>
+	<input-element id="battery">
+		<![CDATA[
+		<table id='batteryBtnTable' width='98%' border='0' align='center' 
+		 cellpadding='0' cellspacing='0'>
+			<tr>
+				<td style='text-align:left;'>
+					<input name='btnAddBattery' value='添加电池组' type='button' 
+					 class='button_length' onclick='addTbRow("batteryInputTable","batterySampleTable")' />
+				</td>
+			</tr>
+		</table>
+		<table id='batteryInputTable' width='98%' border='0' align='center' 
+		 cellpadding='0' cellspacing='0' class="tabout">
+		</table>
+		<table id='batterySampleTable' style='display:none;'>
+			<tr>
+				<td class='tdulright'>
+				电池组编号：
+				<input id='sample_test_object_row0_#itemId' name='sample_test_object_row0_#itemId' 
+				 type='text' value='' class='inputtext' 
+				 style='width:80px;border-left:0px;border-right:0px;border-top:0px' />&nbsp;&nbsp;
+				<input name='btnDelBattery' value='删除' type='button' 
+				 class='button' onclick='deleteTbRow("batteryInputTable","batterySampleTable","row0")' />
+				<br />
+				01#：
+				<input id='sample_test_num_row0_#itemId' name='sample_test_num_row0_#itemId'
+				 type='hidden' value='1' />
+				<input id='sample_test_result_row0_#itemId' name='sample_test_result_row0_#itemId'
+				 type='text' value='' class='inputtext' 
+				 style='width:65px;border-left:0px;border-right:0px;border-top:0px' />
+				02#：
+				<input id='sample_test_num_row0_#itemId' name='sample_test_num_row0_#itemId'
+				 type='hidden' value='2' />
+				<input id='sample_test_result_row0_#itemId' name='sample_test_result_row0_#itemId'
+				 type='text' value='' class='inputtext' 
+				 style='width:65px;border-left:0px;border-right:0px;border-top:0px' />
+				03#：
+				<input id='sample_test_num_row0_#itemId' name='sample_test_num_row0_#itemId'
+				 type='hidden' value='3' />
+				<input id='sample_test_result_row0_#itemId' name='sample_test_result_row0_#itemId'
+				 type='text' value='' class='inputtext' 
+				 style='width:65px;border-left:0px;border-right:0px;border-top:0px' />
+				04#：
+				<input id='sample_test_num_row0_#itemId' name='sample_test_num_row0_#itemId'
+				 type='hidden' value='4' />
+				<input id='sample_test_result_row0_#itemId' name='sample_test_result_row0_#itemId'
+				 type='text' value='' class='inputtext' 
+				 style='width:65px;border-left:0px;border-right:0px;border-top:0px' />
+				05#：
+				<input id='sample_test_num_row0_#itemId' name='sample_test_num_row0_#itemId'
+				 type='hidden' value='5' />
+				<input id='sample_test_result_row0_#itemId' name='sample_test_result_row0_#itemId'
+				 type='text' value='' class='inputtext' 
+				 style='width:65px;border-left:0px;border-right:0px;border-top:0px' />
+				06#：
+				<input id='sample_test_num_row0_#itemId' name='sample_test_num_row0_#itemId'
+				 type='hidden' value='6' />
+				<input id='sample_test_result_row0_#itemId' name='sample_test_result_row0_#itemId'
+				 type='text' value='' class='inputtext' 
+				 style='width:65px;border-left:0px;border-right:0px;border-top:0px' />
+				07#：
+				<input id='sample_test_num_row0_#itemId' name='sample_test_num_row0_#itemId'
+				 type='hidden' value='7' />
+				<input id='sample_test_result_row0_#itemId' name='sample_test_result_row0_#itemId'
+				 type='text' value='' class='inputtext' 
+				 style='width:65px;border-left:0px;border-right:0px;border-top:0px' />
+				08#：
+				<input id='sample_test_num_row0_#itemId' name='sample_test_num_row0_#itemId'
+				 type='hidden' value='8' />
+				<input id='sample_test_result_row0_#itemId' name='sample_test_result_row0_#itemId'
+				 type='text' value='' class='inputtext' 
+				 style='width:65px;border-left:0px;border-right:0px;border-top:0px' />
+				09#：
+				<input id='sample_test_num_row0_#itemId' name='sample_test_num_row0_#itemId'
+				 type='hidden' value='9' />
+				<input id='sample_test_result_row0_#itemId' name='sample_test_result_row0_#itemId'
+				 type='text' value='' class='inputtext' 
+				 style='width:65px;border-left:0px;border-right:0px;border-top:0px' />
+				10#：
+				<input id='sample_test_num_row0_#itemId' name='sample_test_num_row0_#itemId'
+				 type='hidden' value='10' />
+				<input id='sample_test_result_row0_#itemId' name='sample_test_result_row0_#itemId'
+				 type='text' value='' class='inputtext' 
+				 style='width:65px;border-left:0px;border-right:0px;border-top:0px' />
+				11#：
+				<input id='sample_test_num_row0_#itemId' name='sample_test_num_row0_#itemId'
+				 type='hidden' value='11' />
+				<input id='sample_test_result_row0_#itemId' name='sample_test_result_row0_#itemId'
+				 type='text' value='' class='inputtext' 
+				 style='width:65px;border-left:0px;border-right:0px;border-top:0px' />
+				12#：
+				<input id='sample_test_num_row0_#itemId' name='sample_test_num_row0_#itemId'
+				 type='hidden' value='12' />
+				<input id='sample_test_result_row0_#itemId' name='sample_test_result_row0_#itemId'
+				 type='text' value='' class='inputtext' 
+				 style='width:65px;border-left:0px;border-right:0px;border-top:0px' />
+				<br />
+				13#：
+				<input id='sample_test_num_row0_#itemId' name='sample_test_num_row0_#itemId'
+				 type='hidden' value='13' />
+				<input id='sample_test_result_row0_#itemId' name='sample_test_result_row0_#itemId'
+				 type='text' value='' class='inputtext' 
+				 style='width:65px;border-left:0px;border-right:0px;border-top:0px' />
+				14#：
+				<input id='sample_test_num_row0_#itemId' name='sample_test_num_row0_#itemId'
+				 type='hidden' value='14' />
+				<input id='sample_test_result_row0_#itemId' name='sample_test_result_row0_#itemId'
+				 type='text' value='' class='inputtext' 
+				 style='width:65px;border-left:0px;border-right:0px;border-top:0px' />
+				15#：
+				<input id='sample_test_num_row0_#itemId' name='sample_test_num_row0_#itemId'
+				 type='hidden' value='15' />
+				<input id='sample_test_result_row0_#itemId' name='sample_test_result_row0_#itemId'
+				 type='text' value='' class='inputtext' 
+				 style='width:65px;border-left:0px;border-right:0px;border-top:0px' />
+				16#：
+				<input id='sample_test_num_row0_#itemId' name='sample_test_num_row0_#itemId'
+				 type='hidden' value='16' />
+				<input id='sample_test_result_row0_#itemId' name='sample_test_result_row0_#itemId'
+				 type='text' value='' class='inputtext' 
+				 style='width:65px;border-left:0px;border-right:0px;border-top:0px' />
+				17#：
+				<input id='sample_test_num_row0_#itemId' name='sample_test_num_row0_#itemId'
+				 type='hidden' value='17' />
+				<input id='sample_test_result_row0_#itemId' name='sample_test_result_row0_#itemId'
+				 type='text' value='' class='inputtext' 
+				 style='width:65px;border-left:0px;border-right:0px;border-top:0px' />
+				18#：
+				<input id='sample_test_num_row0_#itemId' name='sample_test_num_row0_#itemId'
+				 type='hidden' value='18' />
+				<input id='sample_test_result_row0_#itemId' name='sample_test_result_row0_#itemId'
+				 type='text' value='' class='inputtext' 
+				 style='width:65px;border-left:0px;border-right:0px;border-top:0px' />
+				19#：
+				<input id='sample_test_num_row0_#itemId' name='sample_test_num_row0_#itemId'
+				 type='hidden' value='19' />
+				<input id='sample_test_result_row0_#itemId' name='sample_test_result_row0_#itemId'
+				 type='text' value='' class='inputtext' 
+				 style='width:65px;border-left:0px;border-right:0px;border-top:0px' />
+				20#：
+				<input id='sample_test_num_row0_#itemId' name='sample_test_num_row0_#itemId'
+				 type='hidden' value='20' />
+				<input id='sample_test_result_row0_#itemId' name='sample_test_result_row0_#itemId'
+				 type='text' value='' class='inputtext' 
+				 style='width:65px;border-left:0px;border-right:0px;border-top:0px' />
+				21#：
+				<input id='sample_test_num_row0_#itemId' name='sample_test_num_row0_#itemId'
+				 type='hidden' value='21' />
+				<input id='sample_test_result_row0_#itemId' name='sample_test_result_row0_#itemId'
+				 type='text' value='' class='inputtext' 
+				 style='width:65px;border-left:0px;border-right:0px;border-top:0px' />
+				22#：
+				<input id='sample_test_num_row0_#itemId' name='sample_test_num_row0_#itemId'
+				 type='hidden' value='22' />
+				<input id='sample_test_result_row0_#itemId' name='sample_test_result_row0_#itemId'
+				 type='text' value='' class='inputtext' 
+				 style='width:65px;border-left:0px;border-right:0px;border-top:0px' />
+				23#：
+				<input id='sample_test_num_row0_#itemId' name='sample_test_num_row0_#itemId'
+				 type='hidden' value='23' />
+				<input id='sample_test_result_row0_#itemId' name='sample_test_result_row0_#itemId'
+				 type='text' value='' class='inputtext' 
+				 style='width:65px;border-left:0px;border-right:0px;border-top:0px' />
+				24#：
+				<input id='sample_test_num_row0_#itemId' name='sample_test_num_row0_#itemId'
+				 type='hidden' value='24' />
+				<input id='sample_test_result_row0_#itemId' name='sample_test_result_row0_#itemId'
+				 type='text' value='' class='inputtext' 
+				 style='width:65px;border-left:0px;border-right:0px;border-top:0px' />
+				</td>
+			</tr>
+		</table>
+		]]>
+	</input-element>
+	<input-element id="station_antenna">
+		<![CDATA[
+		<table id='btnStationAntennaTable' width='98%' border='0' align='center' 
+		 cellpadding='0' cellspacing='0'>
+			<tr>
+				<td style='text-align:left;'>
+					<input name='btnStationAntennaAdd' value='添加' type='button' 
+					 class='button_length' onclick='addTbRow("stationAntennaInputTable","stationAntennaSampleTable")' />
+				</td>
+			</tr>
+		</table>
+		<table id='stationAntennaInputTable' width='98%' border='0' align='center' 
+		 cellpadding='0' cellspacing='0' class="tabout">
+		</table>
+		<table id='stationAntennaSampleTable' style='display:none;'>
+			<tr>
+				<td class='tdulright'>
+					<select id='sample_test_object_row0_#itemId' name='sample_test_object_row0_#itemId'
+					 style='width:100px;'>
+						<option value='GSM900'>GSM900</option>
+						<option value='GSM1800'>GSM1800</option>
+						<option value='TD'>TD</option>
+					</select>
+				</td>
+				<td class='tdulright'>
+					<input id='sample_test_num_row0_#itemId' name='sample_test_num_row0_#itemId' 
+				 	 type='text' value='CELL0row0' class='inputtext'
+					 style='width:50px;border-left:0px;border-right:0px;border-top:0px' />
+				</td>
+				<td class='tdulright'>
+					高度：<input id='sample_test_result_row0_#itemId' name='sample_test_result_row0_#itemId' 
+				 	 type='text' value='' class='inputtext'
+					 style='width:50px;border-left:0px;border-right:0px;border-top:0px' />
+				</td>
+				<td class='tdulright'>
+					方向角：<input id='sample_test_result_row0_#itemId' name='sample_test_result_row0_#itemId' 
+				 	 type='text' value='' class='inputtext'
+					 style='width:50px;border-left:0px;border-right:0px;border-top:0px' />
+				</td>
+				<td class='tdulright'>
+					下倾角：<input id='sample_test_result_row0_#itemId' name='sample_test_result_row0_#itemId' 
+				 	 type='text' value='' class='inputtext'
+					 style='width:50px;border-left:0px;border-right:0px;border-top:0px' />
+				</td>
+				<td class='tdulright'>
+					<input name='btnDelStationAntenna' value='删除' type='button' 
+					 class='button' onclick='deleteTbRow("stationAntennaInputTable","stationAntennaSampleTable","row0")' />
+				</td>
+			</tr>
+		</table>
+		]]>
+	</input-element>
+	<input-element id="indoor_coverage">
+		<![CDATA[
+		<table id='btnIndoorCoverageTable' width='98%' border='0' align='center' 
+		 cellpadding='0' cellspacing='0'>
+			<tr>
+				<td style='text-align:left;'>
+					<input name='btnIndoorCoverageAdd' value='添加' type='button' 
+					 class='button_length' onclick='addTbRow("indoorCoverageInputTable","indoorCoverageSampleTable")' />
+				</td>
+			</tr>
+		</table>
+		<table id='indoorCoverageInputTable' width='98%' border='0' align='center' 
+		 cellpadding='0' cellspacing='0' class="tabout">
+		</table>
+		<table id='indoorCoverageSampleTable' style='display:none;'>
+			<tr>
+				<td class='tdulright'>
+					<input id='sample_test_num_row0_#itemId' name='sample_test_num_row0_#itemId' 
+				 	 type='text' value='row0' class='inputtext'
+					 style='width:50px;border-left:0px;border-right:0px;border-top:0px' />
+				</td>
+				<td class='tdulright'>
+					天线编号：<input id='sample_test_object_row0_#itemId' name='sample_test_object_row0_#itemId' 
+				 	 type='text' value='' class='inputtext'
+					 style='width:50px;border-left:0px;border-right:0px;border-top:0px' />
+				</td>
+				<td class='tdulright'>
+					信源小区：<input id='sample_test_result_row0_#itemId' name='sample_test_result_row0_#itemId' 
+				 	 type='text' value='' class='inputtext'
+					 style='width:50px;border-left:0px;border-right:0px;border-top:0px' />
+				</td>
+				<td class='tdulright'>
+					信源场强（dBm）：<input id='sample_test_result_row0_#itemId' name='sample_test_result_row0_#itemId' 
+				 	 type='text' value='' class='inputtext'
+					 style='width:50px;border-left:0px;border-right:0px;border-top:0px' />
+				</td>
+				<td class='tdulright'>
+					通话质量：<input id='sample_test_result_row0_#itemId' name='sample_test_result_row0_#itemId' 
+				 	 type='text' value='' class='inputtext'
+					 style='width:50px;border-left:0px;border-right:0px;border-top:0px' />
+				</td>
+				<td class='tdulright'>
+					<input name='btnDelIndoorCoverage' value='删除' type='button' 
+					 class='button' onclick='deleteTbRow("indoorCoverageInputTable","indoorCoverageSampleTable","row0")' />
+				</td>
+			</tr>
+		</table>
+		]]>
+	</input-element>
+	<input-element id="wlan">
+		<![CDATA[
+		<table id='btnWlanTable' width='98%' border='0' align='center' 
+		 cellpadding='0' cellspacing='0'>
+			<tr>
+				<td style='text-align:left;'>
+					<input name='btnWlanAdd' value='添加' type='button' 
+					 class='button_length' onclick='addTbRow("wlanInputTable","wlanSampleTable")' />
+				</td>
+			</tr>
+		</table>
+		<table id='wlanInputTable' width='98%' border='0' align='center' 
+		 cellpadding='0' cellspacing='0' class="tabout">
+		</table>
+		<table id='wlanSampleTable' style='display:none;'>
+			<tr>
+				<td class='tdulright'>
+					<input id='sample_test_num_row0_#itemId' name='sample_test_num_row0_#itemId' 
+				 	 type='text' value='row0' class='inputtext'
+					 style='width:50px;border-left:0px;border-right:0px;border-top:0px' />
+				</td>
+				<td class='tdulright'>
+					天线编号：<input id='sample_test_object_row0_#itemId' name='sample_test_object_row0_#itemId' 
+				 	 type='text' value='' class='inputtext'
+					 style='width:50px;border-left:0px;border-right:0px;border-top:0px' />
+				</td>
+				<td class='tdulright'>
+					<table id='wlanInputTable' width='98%' border='0' align='center' cellpadding='0' cellspacing='0'>
+						<tr>
+							<td>
+								信号强度（dBm）：
+							</td>
+							<td>
+								<input id='sample_test_result_row0_#itemId' name='sample_test_result_row0_#itemId' 
+							 	 type='text' value='' class='inputtext'
+								 style='width:50px;border-left:0px;border-right:0px;border-top:0px' />
+							</td>
+							<td>
+								信噪比（dB）：
+							</td>
+							<td>
+								<input id='sample_test_result_row0_#itemId' name='sample_test_result_row0_#itemId' 
+							 	 type='text' value='' class='inputtext'
+								 style='width:50px;border-left:0px;border-right:0px;border-top:0px' /> 
+							</td>
+							<td>
+								信道号：
+							</td>
+							<td>
+								<input id='sample_test_result_row0_#itemId' name='sample_test_result_row0_#itemId' 
+							 	 type='text' value='' class='inputtext'
+								 style='width:50px;border-left:0px;border-right:0px;border-top:0px' /> 
+							</td>
+							<td>
+								SSID：
+							</td>
+							<td>
+								<input id='sample_test_result_row0_#itemId' name='sample_test_result_row0_#itemId' 
+							 	 type='text' value='' class='inputtext'
+								 style='width:50px;border-left:0px;border-right:0px;border-top:0px' /> 
+							</td>
+							<td>
+								认证是否成功：
+							</td>
+							<td>
+								<input id='sample_test_result_row0_#itemId' name='sample_test_result_row0_#itemId' 
+							 	 type='text' value='' class='inputtext'
+								 style='width:50px;border-left:0px;border-right:0px;border-top:0px' /> 
+							</td>
+						</tr>
+						<tr>
+							<td>
+								认证接入时延：
+							</td>
+							<td>
+								<input id='sample_test_result_row0_#itemId' name='sample_test_result_row0_#itemId' 
+							 	 type='text' value='' class='inputtext'
+								 style='width:50px;border-left:0px;border-right:0px;border-top:0px' /> 
+							</td>
+							<td>
+								下线是否成功：
+							</td>
+							<td>
+								<input id='sample_test_result_row0_#itemId' name='sample_test_result_row0_#itemId' 
+							 	 type='text' value='' class='inputtext'
+								 style='width:50px;border-left:0px;border-right:0px;border-top:0px' /> 
+							</td>
+							<td>
+								Ping时延：
+							</td>
+							<td>
+								<input id='sample_test_result_row0_#itemId' name='sample_test_result_row0_#itemId' 
+							 	 type='text' value='' class='inputtext'
+								 style='width:50px;border-left:0px;border-right:0px;border-top:0px' /> 
+							</td>
+							<td>
+								Ping丢包率：
+							</td>
+							<td>
+								<input id='sample_test_result_row0_#itemId' name='sample_test_result_row0_#itemId' 
+							 	 type='text' value='' class='inputtext'
+								 style='width:50px;border-left:0px;border-right:0px;border-top:0px' /> 
+							</td>
+							<td>
+								切换是否成功：
+							</td>
+							<td>
+								<input id='sample_test_result_row0_#itemId' name='sample_test_result_row0_#itemId' 
+							 	 type='text' value='' class='inputtext'
+								 style='width:50px;border-left:0px;border-right:0px;border-top:0px' />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								AP接入带宽：
+							</td>
+							<td>
+								<input id='sample_test_result_row0_#itemId' name='sample_test_result_row0_#itemId' 
+							 	 type='text' value='' class='inputtext'
+								 style='width:50px;border-left:0px;border-right:0px;border-top:0px' /> 
+							</td>
+							<td>
+								下载速率：
+							</td>
+							<td>
+								<input id='sample_test_result_row0_#itemId' name='sample_test_result_row0_#itemId' 
+							 	 type='text' value='' class='inputtext'
+								 style='width:50px;border-left:0px;border-right:0px;border-top:0px' /> 
+							</td>
+							<td>
+								用户隔离度：
+							</td>
+							<td>
+								<input id='sample_test_result_row0_#itemId' name='sample_test_result_row0_#itemId' 
+							 	 type='text' value='' class='inputtext'
+								 style='width:50px;border-left:0px;border-right:0px;border-top:0px' />
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+					 		</td> 
+					 	</tr>
+					</table>
+				</td>
+				<td class='tdulright'>
+					<input name='btnDelWlan' value='删除' type='button' 
+					 class='button' onclick='deleteTbRow("wlanInputTable","wlanSampleTable","row0")' />
+				</td>
+			</tr>
+		</table>
+		]]>
+	</input-element>
+</root>

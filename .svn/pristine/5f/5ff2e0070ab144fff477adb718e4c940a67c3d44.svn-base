@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2010-7-13 16:52:49 by Hibernate Tools 3.3.0.GA -->
+<hibernate-mapping>
+	<class name="com.cabletech.business.ah.rating.model.ExamVerify" table="AH_EXAMVERIFY">
+		<id name="id" type="string">
+			<column name="ID" length="12" />
+			<generator class="com.cabletech.common.util.StrSequenceGenerator">
+				<param name="sequence">SEQ_RATING_ID</param>
+				<param name="length">12</param>
+			</generator>
+		</id>
+		<property name="result" type="string">
+			<column name="RESULT" />
+		</property>
+		<property name="remark" type="string">
+			<column name="REMARK" />
+		</property>
+		<property name="operate" type="string">
+			<column name="OPERATER" />
+		</property>
+		<property name="operattime" type="timestamp">
+			<column name="OPERAT_TIME" />
+		</property>
+		<property name="state" type="string">
+			<column name="STATE" />
+		</property>
+	</class>
+</hibernate-mapping>

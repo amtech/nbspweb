@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping
+    PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.cabletech.business.monthcost.model.MonthCheckCost"
+		table="MONTH_CHECK_COST">
+		<id name="id" type="string" unsaved-value="null">
+			<column name="id" sql-type="char(32)" not-null="true" />
+			<generator class="com.cabletech.common.util.StrSequenceGenerator">
+				<param name="sequence">SEQ_MONTHCHECKCOST_ID</param>
+				<param name="length">12</param>
+			</generator>
+		</id>
+		<property name="regionId" column="REGIONID" type="string" />
+		<property name="months" column="MONTHS" type="string" />
+		<property name="specialty" column="SPECIALTY" type="string" />
+		<property name="unitPrice" column="UNITPRICE" type="string" />
+		<property name="contractorId" column="CONTRACTORID" type="string" /> 
+		<property name="shouldMoney" column="SHOULDMONEY" type="string" />
+		<property name="factMoney" column="FACTMONEY" type="string" />
+		<property name="checkFraction" column="CHECKFRACTION" type="string" />
+		<property name="subtractMoney" column="SUBTRACTMONEY" type="string" />
+		<property name="numbers" column="NUMBERS" type="string" />
+		<property name="writePersonId" column="WRITEPERSONID" type="string" />
+		<property name="writeDate" column="WRITEDATE" type="string" />
+	</class>
+</hibernate-mapping>

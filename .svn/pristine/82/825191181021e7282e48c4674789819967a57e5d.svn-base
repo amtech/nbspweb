@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.cabletech.business.sysmanager.model.TaskSmsValidity"
+		table="TASK_SMS_VALIDITY">
+		<id name="id" type="string">
+			<column name="ID" length="40" />
+			<generator class="com.cabletech.common.util.StrSequenceGenerator">
+				<param name="sequence">SEQ_TaskSmsValidity_ID</param>
+				<param name="length">40</param>
+			</generator>
+		</id>
+		<property name="workorderType" type="string">
+			<column name="WORKORDER_TYPE" length="12" />
+		</property>
+		<property name="smsType" type="string">
+			<column name="SMS_TYPE" length="12" />
+		</property>
+		<property name="validity" type="string">
+			<column name="VALIDITY" length="12" />
+		</property>
+	</class>
+</hibernate-mapping>

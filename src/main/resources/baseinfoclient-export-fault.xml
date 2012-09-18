@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- BASEINFOCLIENT 属性配置 -->
+<!-- 故障派单模块   EXCEL导出配置 -->
+<items> 
+    <export>
+    	<excel key="faultalertundispatchedlist" name="未派单故障告警信息列表" dataService="faultAlertServiceImpl">
+    		<column name="故障单标题" datakey="TROUBLE_TITLE" ></column>
+    		<column name="EOMS单号" datakey="EOMS_ID" ></column>
+    		<column name="故障发生时间" datakey="TROUBLE_TIME_DIS" ></column>
+    		<column name="故障发生地点" datakey="ADDRESS" ></column>
+    		<column name="故障站点" datakey="RSNAME" ></column>
+    		<column name="是否紧急" datakey="IS_INSTANCY" constantName="SHF" ></column>
+    		<column name="发现方式" datakey="FIND_TYPENAME" ></column>
+    		<column name="故障告警单状态" datakey="IGNORE_STATE_DIS" ></column>
+    	 </excel>
+    	 <excel key="faultalertlist" name="故障告警信息列表" dataService="faultAlertServiceImpl">
+    		<column name="故障单标题" datakey="TROUBLE_TITLE" ></column>
+    		<column name="EOMS单号" datakey="EOMS_ID" ></column>
+    		<column name="故障发生时间" datakey="TROUBLE_TIME_DIS" ></column>
+    		<column name="故障发生地点" datakey="ADDRESS" ></column>
+    		<column name="故障站点" datakey="RSNAME" ></column>
+    		<column name="是否紧急" datakey="IS_INSTANCY" constantName="SHF" ></column>
+    		<column name="发现方式" datakey="FIND_TYPENAME" ></column>
+    		<column name="故障告警单状态" datakey="IGNORE_STATE_DIS" ></column>
+    	 </excel>
+    	 <excel key="faultdispatchdraftslist" name="故障草稿箱列表" dataService="faultDispatchDraftServiceImpl">
+    		<column name="故障单标题" datakey="TROUBLE_TITLE" ></column>
+    		<column name="工单号" datakey="TASK_CODE" ></column>
+    		<column name="处理时限" datakey="PROCESS_TIME_DIS" ></column>
+    		<column name="EOMS单号" datakey="EOMS_ID" ></column>
+    		<column name="故障发生时间" datakey="TROUBLE_TIME_DIS" ></column>
+    		<column name="故障发生地点" datakey="ADDRESS" ></column>
+    		<column name="故障站点" datakey="RSNAME" ></column>
+    		<column name="是否紧急" datakey="IS_INSTANCY" constantName="SHF" ></column>
+    		<column name="发现方式" datakey="FIND_TYPENAME" ></column>
+    	 </excel>
+    	 <excel key="faultdispatchwaithandledlist" name="待办故障派单信息列表" dataService="faultDispatchServiceImpl">
+    		<column name="故障单标题" datakey="TROUBLE_TITLE" ></column>
+    		<column name="工单号" datakey="TASK_CODE" ></column>
+    		<column name="处理时限" datakey="PROCESS_TIME_DIS" ></column>
+    		<column name="EOMS单号" datakey="EOMS_ID" ></column>
+    		<column name="故障发生时间" datakey="TROUBLE_TIME_DIS" ></column>
+    		<column name="故障发生地点" datakey="ADDRESS" ></column>
+    		<column name="故障站点" datakey="RSNAME" ></column>
+    		<column name="是否紧急" datakey="IS_INSTANCY" constantName="SHF" ></column>
+    		<column name="发现方式" datakey="FIND_TYPENAME" ></column>
+    		<column name="状态" datakey="PROINST_STATE" ></column>
+    	 </excel>
+    	 <excel key="faultdispatchhandledlist" name="已办故障派单信息列表" dataService="faultDispatchHandledServiceImpl">
+    		<column name="故障单标题" datakey="TROUBLE_TITLE" ></column>
+    		<column name="工单号" datakey="TASK_CODE" ></column>
+    		<column name="处理时限" datakey="PROCESS_TIME_DIS" ></column>
+    		<column name="EOMS单号" datakey="EOMS_ID" ></column>
+    		<column name="故障发生时间" datakey="TROUBLE_TIME_DIS" ></column>
+    		<column name="故障发生地点" datakey="ADDRESS" ></column>
+    		<column name="故障站点" datakey="RSNAME" ></column>
+    		<column name="是否紧急" datakey="IS_INSTANCY" constantName="SHF" ></column>
+    		<column name="发现方式" datakey="FIND_TYPENAME" ></column>
+    		<column name="状态" datakey="TASK_STATE" constantName="faulttaskstate"></column>
+    	 </excel>
+    	 <excel key="faultdispatchwaitcanceledlist" name="待取消故障派单信息列表" dataService="faultDispatchCancelServiceImpl">
+    		<column name="故障单标题" datakey="TROUBLE_TITLE" ></column>
+    		<column name="工单号" datakey="TASK_CODE" ></column>
+    		<column name="处理时限" datakey="PROCESS_TIME_DIS" ></column>
+    		<column name="EOMS单号" datakey="EOMS_ID" ></column>
+    		<column name="故障发生时间" datakey="TROUBLE_TIME_DIS" ></column>
+    		<column name="故障发生地点" datakey="ADDRESS" ></column>
+    		<column name="故障站点" datakey="RSNAME" ></column>
+    		<column name="是否紧急" datakey="IS_INSTANCY" constantName="SHF" ></column>
+    		<column name="发现方式" datakey="FIND_TYPENAME" ></column>
+    		<column name="状态" datakey="TASK_STATE" constantName="faulttaskstate"></column>
+    	 </excel>
+    	 <excel key="faultdispatchcanceledlist" name="已取消故障派单信息列表" dataService="faultDispatchCancelServiceImpl">
+    		<column name="故障单标题" datakey="TROUBLE_TITLE" ></column>
+    		<column name="工单号" datakey="TASK_CODE" ></column>
+    		<column name="处理时限" datakey="PROCESS_TIME_DIS" ></column>
+    		<column name="EOMS单号" datakey="EOMS_ID" ></column>
+    		<column name="故障发生时间" datakey="TROUBLE_TIME_DIS" ></column>
+    		<column name="故障发生地点" datakey="ADDRESS" ></column>
+    		<column name="故障站点" datakey="RSNAME" ></column>
+    		<column name="是否紧急" datakey="IS_INSTANCY" constantName="SHF" ></column>
+    		<column name="发现方式" datakey="FIND_TYPENAME" ></column>
+    		<column name="状态" datakey="TASK_STATE" constantName="faulttaskstate"></column>
+    	 </excel>
+    	 <excel key="faultdispatchwaitdeletedlist" name="待删除故障派单信息列表" dataService="faultDispatchWaitDeletedServiceImpl">
+    		<column name="故障单标题" datakey="TROUBLE_TITLE" ></column>
+    		<column name="工单号" datakey="TASK_CODE" ></column>
+    		<column name="处理时限" datakey="PROCESS_TIME_DIS" ></column>
+    		<column name="EOMS单号" datakey="EOMS_ID" ></column>
+    		<column name="故障发生时间" datakey="TROUBLE_TIME_DIS" ></column>
+    		<column name="故障发生地点" datakey="ADDRESS" ></column>
+    		<column name="故障站点" datakey="RSNAME" ></column>
+    		<column name="是否紧急" datakey="IS_INSTANCY" constantName="SHF" ></column>
+    		<column name="发现方式" datakey="FIND_TYPENAME" ></column>
+    		<column name="状态" datakey="TASK_STATE" constantName="faulttaskstate"></column>
+    	 </excel>
+    	 <excel key="faultdispatchlist" name="故障派单信息列表" dataService="faultDispatchServiceImpl">
+    		<column name="故障单标题" datakey="TROUBLE_TITLE" ></column>
+    		<column name="工单号" datakey="TASK_CODE" ></column>
+    		<column name="处理时限" datakey="PROCESS_TIME_DIS" ></column>
+    		<column name="EOMS单号" datakey="EOMS_ID" ></column>
+    		<column name="故障发生时间" datakey="TROUBLE_TIME_DIS" ></column>
+    		<column name="故障发生地点" datakey="ADDRESS" ></column>
+    		<column name="故障站点" datakey="RSNAME" ></column>
+    		<column name="是否紧急" datakey="IS_INSTANCY" constantName="SHF" ></column>
+    		<column name="发现方式" datakey="FIND_TYPENAME" ></column>
+    		<column name="状态" datakey="TASK_STATE" constantName="faulttaskstate"></column>
+    	 </excel>
+    	 <excel key="faulttimelyratelist" name="工单统计及时率列表" dataService="faultHandledOnTimeServiceImpl">
+    		<column name="代维单位名称" datakey="CONTRACTORNAME" ></column>
+    		<column name="总故障数" datakey="FAULT_SUM" ></column>
+    		<column name="超时故障数" datakey="OVERTIME_FAULT_SUM" ></column>
+    		<column name="故障处理及时率" datakey="OVERTIME_RATE" ></column>
+    	 </excel>
+    	 <excel key="faultovertimelist" name="故障统计超时列表" dataService="faultHandledOverTimeServiceImpl">
+    		<column name="故障标题" datakey="TROUBLE_TITLE" ></column>
+    		<column name="故障开始时间" datakey="TROUBLE_TIME" ></column>
+    		<column name="故障结束时间" datakey="REPLY_TIME" ></column>
+    		<column name="处理期限" datakey="DEADLINE" ></column>
+    		<column name="故障处理单位" datakey="CONTRACTORNAME" ></column>
+    		<column name="超时时长（分钟）" datakey="OVERTIME_LENGTH" ></column>
+    	 </excel>
+    	 <!-- 常量 -->
+    	 <constant name="SHF">
+    	 	<item key="1" value="是"></item>
+    		<item key="2" value="否"></item>
+    	 </constant>
+    	 <constant name="faulttaskstate">
+    	 	<item key="1" value="处理中"></item>
+    		<item key="2" value="回单审核"></item>
+    		<item key="3" value="处理结束"></item>
+    		<item key="4" value="已取消"></item>
+    	 </constant>
+    </export>
+</items>

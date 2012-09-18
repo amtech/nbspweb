@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping
+    PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.cabletech.business.wplan.plan.model.Patrolinfo"
+		table="WPLAN_PATROLINFO">
+		<id name="id" type="string" unsaved-value="null">
+			<column name="id" sql-type="varchar(12)" not-null="true" />
+			<generator class="com.cabletech.common.util.StrSequenceGenerator">
+				<param name="sequence">SEQ_WORKFLOW_ID</param>
+				<param name="length">12</param>
+			</generator>
+		</id>
+		<property name="planname">
+			<column name="PLAN_NAME" />
+		</property>
+		<property name="year">
+			<column name="YEAR" />
+		</property>
+		<property name="businesstype">
+			<column name="BUSINESS_TYPE" />
+		</property>
+		<property name="plantype">
+			<column name="PLAN_TYPE" />
+		</property>
+		<property name="startdate" type="java.util.Date">
+			<column name="START_TIME" />
+		</property>
+		<property name="enddate" type="java.util.Date">
+			<column name="END_TIME" />
+		</property>
+		<property name="patrolgroupid">
+			<column name="PATROL_GROUP_ID" />
+		</property>
+		<property name="planstate">
+			<column name="PLAN_STATE" />
+		</property>
+		<property name="regionid">
+			<column name="REGION_ID" />
+		</property>
+		<property name="creater">
+			<column name="CREATER" />
+		</property>
+		<property name="createtime" 
+			type="java.util.Date">
+			<column name="CREATETIME" />
+		</property>
+		<property name="maintainResourcesNum">
+			<column name="MAINTAIN_RESOURCES_NUM" />
+		</property>
+	</class>
+</hibernate-mapping>

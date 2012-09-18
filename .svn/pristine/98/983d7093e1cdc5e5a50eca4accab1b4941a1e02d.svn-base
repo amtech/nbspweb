@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping
+    PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class
+		name="com.cabletech.business.wplan.nopatrolstation.model.NoPatrolStation"
+		table="WPLAN_NOPATROLSTATION">
+		<!-- A 32 hex character is our surrogate key. It's automatically generated 
+			by Hibernate with the UUID pattern. -->
+		<id name="id" type="string" column="id">
+			<generator class="com.cabletech.common.util.StrSequenceGenerator">
+				<param name="sequence">SEQ_WPLAN_ID</param>
+				<param name="length">12</param>
+			</generator>
+		</id>
+		<property name="resultId">
+			<column name="RESULT_ID" />
+		</property>
+		<property name="planId">
+			<column name="PLAN_ID" />
+		</property>
+		<property name="resourceId">
+			<column name="RESOURCE_ID" />
+		</property>
+		<property name="resourceType">
+			<column name="RESOURCE_TYPE" />
+		</property>
+		<property name="problemType">
+			<column name="PROBLEM_TYPE" />
+		</property>
+		<property name="cause">
+			<column name="CAUSE" />
+		</property>
+		<property name="recorder">
+			<column name="RECORDER" />
+		</property>
+		<property name="processState">
+			<column name="PROCESS_STATE" />
+		</property>
+		<property name="result">
+			<column name="RESULT" />
+		</property>
+		<property name="remark">
+			<column name="REMARK" />
+		</property>
+		<property name="manager">
+			<column name="MANAGER" />
+		</property>
+		<property name="recordDate" type="java.util.Date">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="processTime" type="java.util.Date">
+			<column name="PROCESS_TIME" />
+		</property>
+	</class>
+</hibernate-mapping>

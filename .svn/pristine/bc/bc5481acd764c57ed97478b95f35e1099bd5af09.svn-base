@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root id="patrolItemImport"
+	entity="com.cabletech.business.wplan.patrolitem.model.PatrolItemTemp">
+	<column id="itemName" property-name="itemName" col-index="2"></column>
+	<column id="subitemName" property-name="subitemName" col-index="3"></column>
+	<column id="cycleText" property-name="cycleText" col-index="4"></column>
+	<column id="qualityStandard" property-name="qualityStandard"
+		col-index="5"></column>
+	<column id="inputTypeText" property-name="inputTypeText"
+		col-index="6"></column>
+	<column id="valueScope" property-name="valueScope" col-index="7"></column>
+	<column id="exceptionValue" property-name="exceptionValue"
+		col-index="8"></column>
+	<column id="defaultValue" property-name="defaultValue"
+		col-index="9"></column>
+</root>

@@ -1,0 +1,9 @@
+sm.rmiinterfaces=SmProxyService,TerminalService
+sm.rmiconsole=off
+sm.xmlpath=D\:\\java\\wls1036_dev\\user_projects\\domains\\base_domain\\autodeploy\\nbspweb\\WEB-INF\\classes
+
+sm.rmiinterface.SmProxyService.url=http://192.168.1.4:8012/msgconsole/rmi/SmProxyService
+sm.rmiinterface.SmProxyService.interfaceclass=cabletech.sm.rmi.RmiSmProxyService
+
+sm.rmiinterface.TerminalService.url=http://192.168.1.4:8012/msgconsole/rmi/TerminalService
+sm.rmiinterface.TerminalService.interfaceclass=cabletech.business.service.RmiTerminalService

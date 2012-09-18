@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.cabletech.business.wplan.patrolitem.model.PatrolSubItem" table="WPLAN_PATROLSUBITEM">
+		<id name="id" type="string" column="id">
+			<generator
+				class="com.cabletech.common.util.StrSequenceGenerator">
+				<param name="sequence">SEQ_WPLAN_ID</param>
+				<param name="length">12</param>
+			</generator>
+		</id>
+		<property name="itemId" column="ITEM_ID" />
+		<property name="subitemName" column="SUBITEM_NAME" />
+		<property name="inputType" column="INPUT_TYPE" />
+		<property name="cycle" column="CYCLE" />
+		<property name="qualityStandard" column="QUALITY_STANDARD" />
+		<property name="state" column="STATE" />
+		<property name="valueScope" column="VALUE_SCOPE" />
+		<property name="defaultValue" column="DEFAULT_VALUE" />
+		<property name="exceptionValue" column="EXCEPTION_VALUE" />
+	</class>
+</hibernate-mapping>

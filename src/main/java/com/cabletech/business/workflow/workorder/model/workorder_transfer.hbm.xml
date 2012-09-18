@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping
+    PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class
+		name="com.cabletech.business.workflow.workorder.model.WorkOrderTransfer"
+		table="WTASK_TRANSFER">
+		<!-- A 32 hex character is our surrogate key. It's automatically generated 
+			by Hibernate with the UUID pattern. -->
+		<id name="id" type="string" unsaved-value="null">
+			<column name="id" sql-type="char(32)" not-null="true" />
+			<generator class="com.cabletech.common.util.StrSequenceGenerator">
+				<param name="sequence">SEQ_WORKFLOW_ID</param>
+				<param name="length">12</param>
+			</generator>
+		</id>
+		<property name="taskId" column="TASK_ID" type="string" />
+		<property name="remark" column="REMARK" type="string" />
+		<property name="sourceDeptId" column="SOURCE_DEPT_ID" type="string" />
+		<property name="sourcePrincipal" column="SOURCE_PRINCIPAL"
+			type="string" />
+		<property name="targetDeptId" column="TARGET_DEPT_ID" type="string" />
+		<property name="targetPrincipal" column="TARGET_PRINCIPAL"
+			type="string" />
+		<property name="createDate" column="CREATE_DATE" type="timestamp" />
+		<property name="groupId" column="GROUP_ID" type="string" />
+		<property name="taskState" column="TASK_STATE" type="string" />
+	</class>
+</hibernate-mapping>

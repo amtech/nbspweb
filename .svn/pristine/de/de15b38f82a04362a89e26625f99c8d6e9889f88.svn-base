@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messages id="fault">
+	<message id="send_trouble">
+		{0}故障派发给你，等待你的处理！
+	</message>
+	<message id="reply_trouble">
+		{0}故障已回复，等待你的审核！
+	</message>
+	<message id="approve_not_passed">
+		{0}故障回复审核不通过，请你重新填写故障回复！
+	</message>
+	<message id="transfer_approve">
+		{0}故障回复已经转审给你，请你进行审核！
+	</message>
+	<message id="approve_passed">
+		{0}故障回复审核通过，故障流程已经结束！
+	</message>
+</messages>

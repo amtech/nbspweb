@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.cabletech.business.wplan.template.model.WplanTemplate" table="WPLAN_TEMPLATE">
+		<id name="id" type="string" column="id">
+			<generator
+				class="com.cabletech.common.util.StrSequenceGenerator">
+				<param name="sequence">SEQ_WPLAN_ID</param>
+				<param name="length">12</param>
+			</generator>
+		</id>
+		<property name="businessType" column="BUSINESS_TYPE" />
+		<property name="templateName" column="TEMPLATE_NAME" />
+		<property name="remark" column="REMARK" />
+		<property name="state" column="STATE" />
+		<property name="regionid" column="REGIONID" />
+	</class>
+</hibernate-mapping>

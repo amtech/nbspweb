@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2010-7-13 16:52:49 by Hibernate Tools 3.3.0.GA -->
+<hibernate-mapping>
+	<class name="com.cabletech.business.ah.rating.model.ItemResult" table="AH_ITEMRESULT">
+		<id name="id" type="string">
+			<column name="ID" length="12" />
+			<generator class="com.cabletech.common.util.StrSequenceGenerator">
+				<param name="sequence">SEQ_RATING_ID</param>
+				<param name="length">12</param>
+			</generator>
+		</id>
+		<property name="examid" type="string">
+			<column name="EXAM_ID" />
+		</property>
+		<property name="itemid" type="string">
+			<column name="ITEM_ID" />
+		</property>
+		<property name="targetcompletevalue" type="string">
+			<column name="TARGET_COMPLETEVALUE" />
+		</property>
+		<property name="selfscore" type="string">
+			<column name="SELF_SCORE" />
+		</property>
+		<property name="selfremark" type="string">
+			<column name="SELF_REMARK" />
+		</property>
+		<property name="score" type="string">
+			<column name="SCORE" />
+		</property>
+		<property name="examremark" type="string">
+			<column name="EXAM_REMARK" />
+		</property>
+	</class>
+</hibernate-mapping>

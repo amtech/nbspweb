@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- BASEINFOCLIENT 属性配置 -->
+<!-- 统计分析模块   EXCEL导出配置 -->
+<items> 
+    <export>
+    	 <excel key="orgpatrolresultstatistics" name="代维公司巡检结果统计" dataService="patrolinfoResultServiceImpl">
+    		<column name="代维公司" datakey="ORGNAME" ></column>
+    		<column name="计划站点数" datakey="PLANNUB" ></column>
+    		<column name="问题站点数" datakey="EXCEPTIONNUB" ></column>
+    		<column name="拆迁站点数" datakey="CQNUB" ></column>
+    		<column name="纠纷站点数" datakey="JFNUB" ></column>
+    		<column name="其它不能巡检站点数" datakey="QTNUB" ></column>
+    	 </excel>
+    	 <excel key="grouppatrolresultstatistics" name="巡检组巡检结果统计" dataService="patrolinfoResultServiceImpl">
+    		<column name="名称" datakey="NAME" ></column>
+    		<column name="计划站点数" datakey="PLANNUB" ></column>
+    		<column name="问题站点数" datakey="EXCEPTIONNUB" ></column>
+    		<column name="拆迁站点数" datakey="CQNUB" ></column>
+    		<column name="纠纷站点数" datakey="JFNUB" ></column>
+    		<column name="其它不能巡检站点数" datakey="QTNUB" ></column>
+    	 </excel>
+    	 <excel key="regionpatrolresultstatistics" name="区域巡检结果统计" dataService="patrolinfoResultServiceImpl">
+    		<column name="地市" datakey="REGIONNAME" ></column>
+    		<column name="计划站点数" datakey="PLANNUB" ></column>
+    		<column name="问题站点数" datakey="EXCEPTIONNUB" ></column>
+    		<column name="拆迁站点数" datakey="CQNUB" ></column>
+    		<column name="纠纷站点数" datakey="JFNUB" ></column>
+    		<column name="其它不能巡检站点数" datakey="QTNUB" ></column>
+    	 </excel>
+    	 <excel key="planpatrolresultdetailstatistics" name="计划巡检明细列表" dataService="patrolinfoResultServiceImpl">
+    		<column name="计划名称" datakey="PLAN_NAME" ></column>
+    		<column name="制定时间" datakey="CREATETIME" ></column>
+    		<column name="维护资源数" datakey="RESCOUNT" ></column>
+    		<column name="计划资源数" datakey="PATROLCOUNT" ></column>
+    		<column name="已巡检资源数" datakey="ENDPATROLCOUNT" ></column>
+    		<column name="未巡检资源数" datakey="NOPATROLCOUNT" ></column>
+    		<column name="问题站点数" datakey="EXCEPTIONCOUNT" ></column>
+    		<column name="计划巡检率" datakey="PLANRATE" ></column>
+    		<column name="计划资源覆盖率" datakey="PLANOVERRATE" ></column>
+    		<column name="实际巡检率" datakey="REALRATE" ></column>
+    		<column name="拆迁站点数" datakey="CQNUM" ></column>
+    		<column name="纠纷站点数" datakey="JFNUM" ></column>
+    		<column name="其他不能巡检数" datakey="QTNUM" ></column>
+    	 </excel>
+    	 <excel key="problemstationresultdetailstatistics" name="问题站点巡检明细列表" dataService="patrolinfoResultServiceImpl">
+    		<column name="站点名称" datakey="STATION_NAME" ></column>
+    		<column name="专业类型" datakey="BUSINESS_TYPE" ></column>
+    		<column name="所属区域" datakey="REGIONNAME" ></column>
+    		<column name="所属代维公司" datakey="ORG_NAME" ></column>
+    		<column name="所属计划" datakey="PLAN_NAME" ></column>
+    		<column name="问题项数量" datakey="ERROR_NUM" ></column>
+    	 </excel>
+    	 <excel key="nopatrolstationresultdetailstatistics" name="拆迁纠纷站点巡检明细列表" dataService="patrolinfoResultServiceImpl">
+    		<column name="拆迁站点名称" datakey="NAME" ></column>
+    		<column name="专业类型" datakey="LABLE" ></column>
+    		<column name="所属区域" datakey="REGIONNAME" ></column>
+    		<column name="所属代维公司" datakey="ORGNAME" ></column>
+    		<column name="所属计划" datakey="PLAN_NAME" ></column>
+    		<column name="拆迁原因" datakey="CAUSE" ></column>
+    	 </excel>
+    	 <excel key="problemPatrolItemList" name="巡检异常项统计列表" dataService="problemPatrolItemAnalyseServiceImpl">
+    		<column name="维护对象" datakey="ITEM_NAME" ></column>
+    		<column name="维护检测项目" datakey="SUBITEM_NAME" ></column>
+    		<column name="异常次数" datakey="ERROR_NUM" ></column>
+    	 </excel>
+    	 <excel key="problemStationList" name="问题站点统计列表 " dataService="problemStationAnalyseServiceImpl">
+    		<column name="站点名称" datakey="STATION_NAME" ></column>
+    		<column name="专业类型" datakey="BUSINESS_TYPE" ></column>
+    		<column name="异常项总数" datakey="ERROR_NUM" ></column>
+    		<column name="地址" datakey="ADDRESS" ></column>
+    		<column name="所属代维" datakey="ORG_NAME" ></column>
+    		<column name="代维负责人" datakey="ORG_LINKMAN" ></column>
+    		<column name="联系电话" datakey="ORG_TEL" ></column>
+    	 </excel>
+    	 <excel key="problemStationItemList" name="问题站点隐患信息列表" dataService="problemStationAnalyseServiceImpl">
+    		<column name="计划名称" datakey="PLAN_NAME" ></column>
+    		<column name="维护对象" datakey="ITEM_NAME" ></column>
+    		<column name="维护检测项目" datakey="SUBITEM_NAME" ></column>
+    		<column name="上报时间" datakey="REPORT_DATE_DIS" ></column>
+    		<column name="异常描述" datakey="EXCEPTION_DESC" ></column>
+    		<column name="是否已处理" datakey="IS_PROCESSED" ></column>
+    		<column name="处理时间" datakey="PROCESSED_DATE_DIS" ></column>
+    		<column name="处理结果" datakey="MAINTAIN_RESULT" ></column>
+    		<column name="处理巡检组" datakey="PROCESSED_PATROLGROUP" ></column>
+    	 </excel>
+    	 <excel key="stationPatrolResultList" name="站点巡检结果统计列表 " dataService="stationPatrolResultAnalyseServiceImpl">
+    		<column name="站点名称" datakey="STATION_NAME" ></column>
+    		<column name="专业类型" datakey="BUSINESS_TYPE" ></column>
+    		<column name="所属代维" datakey="ORG_NAME" ></column>
+    		<column name="所属巡检组" datakey="PATROL_NAME" ></column>
+    		<column name="计划名称" datakey="PLAN_NAME" ></column>
+    		<column name="是否已巡检" datakey="IS_PATROLED" ></column>
+    		<column name="巡检时间" datakey="PATROL_TIME_DIS" ></column>
+    		<column name="巡检人" datakey="PATROL_MAN" ></column>
+    	 </excel>
+    </export>
+</items>

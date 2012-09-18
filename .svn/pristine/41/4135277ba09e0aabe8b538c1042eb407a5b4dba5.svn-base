@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- BASEINFOCLIENT 属性配置 -->
+<!-- 质量考核   EXCEL导出配置 -->
+<items> 
+    <export>
+    	 <excel key="mobilequeryanalysislist" name="移动考核查询统计列表 " dataService="WMaintainHandleServiceImpl">
+    		<column name="姓名" datakey="NAME" ></column>
+    		<column name="职位" datakey="POSITION" ></column>
+    		<column name="代维公司" datakey="CONTRACTOR" ></column>
+    		<column name="专业" datakey="BUSINESS" ></column>
+    		<column name="考核月份" datakey="MONTH" ></column>
+    		<column name="区域" datakey="REGION" ></column>
+    		<column name="自评分" datakey="SELF_ASSE_NUM" ></column>
+    		<column name="考评分" datakey="EXAM_ASSE_NUM" ></column>
+    	 </excel>
+    </export>
+</items>

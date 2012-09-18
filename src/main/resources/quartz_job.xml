@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<job-scheduling-data
+	xmlns="http://www.quartz-scheduler.org/xml/JobSchedulingData"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.quartz-scheduler.org/xml/JobSchedulingData http://www.quartz-scheduler.org/xml/job_scheduling_data_1_8.xsd"
+	version="1.8">
+	<schedule>
+		<job>
+			<name>WarnJob</name>
+			<group>WarnJob_Group</group>
+			<description>工单提醒任务</description>
+			<job-class>com.cabletech.business.sysmanager.job.WarnJob</job-class>
+		</job>
+		<trigger>
+			<cron>
+				<name>warn-trigger</name>
+				<group>WarnTrigger_Group</group>
+				<job-name>WarnJob</job-name>
+				<job-group>WarnJob_Group</job-group>
+				<cron-expression>0 0/60 * * * ?</cron-expression>
+				<!-- 每天都运行 并且每隔10分钟运行一次 -->
+			</cron>
+		</trigger>
+	</schedule>
+</job-scheduling-data> 

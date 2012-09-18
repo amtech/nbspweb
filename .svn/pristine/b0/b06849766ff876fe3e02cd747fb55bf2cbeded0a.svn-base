@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2010-7-13 16:52:49 by Hibernate Tools 3.3.0.GA -->
+<hibernate-mapping>
+	<class name="com.cabletech.business.assess.model.AssessAppealForm" table="MM_APPEALFORM">
+		<id name="id" type="string">
+			<column name="ID" length="12" />
+			<generator class="com.cabletech.common.util.StrSequenceGenerator">
+				<param name="sequence">SEQ_WORKFLOW_ID</param>
+				<param name="length">12</param>
+			</generator>
+		</id>
+		<property name="appealFormId" type="string">
+			<column name="APPEALFORM_ID" />
+		</property>
+		<property name="examResultId" type="string">
+			<column name="EXAM_RESULT_ID" />
+		</property>
+		<property name="contractorId" type="string">
+			<column name="CONTRACTOR_ID" />
+		</property>
+		<property name="complainant" type="string">
+			<column name="COMPLAINANT" />
+		</property>		
+		<property name="cause" type="string">
+			<column name="CAUSE" />
+		</property>		
+		<property name="appealTime" type="date">
+			<column name="APPEAL_TIME" />
+		</property>
+		<property name="checkResult" type="string">
+			<column name="CHECK_RESULT" />
+		</property>
+		<property name="reviewer" type="string">
+			<column name="REVIEWER" />
+		</property>
+		<property name="checkTime" type="date">
+			<column name="CHECK_TIME" />
+		</property>
+		<property name="checkOpinion" type="string">
+			<column name="CHECK_OPINION" />
+		</property>
+		<property name="conformResult" type="string">
+			<column name="CONFORM_RESULT" />
+		</property>
+		<property name="opinion" type="string">
+			<column name="OPINION" />
+		</property>
+		<property name="auditingState" type="string">
+			<column name="AUDITING_STATE" />
+		</property>
+		<property name="score" type="double">
+			<column name="SCORE" />
+		</property>
+	</class>
+</hibernate-mapping>

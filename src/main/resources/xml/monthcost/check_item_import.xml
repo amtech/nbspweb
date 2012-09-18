@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root id="checkItemImport"
+	entity="com.cabletech.business.monthcost.model.MonthCheckCostTemp">
+	<column id="months" property-name="months" col-index="1"></column>
+	<column id="specialty" property-name="specialty" col-index="2"></column>
+	<column id="contractorId" property-name="contractorId"
+		col-index="3"></column>
+	<column id="unitPrice" property-name="unitPrice" col-index="4"></column>
+	<column id="numbers" property-name="numbers" col-index="5"></column>
+	<column id="checkFraction" property-name="checkFraction"
+		col-index="6"></column>
+	<column id="subtractMoney" property-name="subtractMoney"
+		col-index="7"></column>
+	<column id="factMoney" property-name="factMoney" col-index="8"></column>
+</root>

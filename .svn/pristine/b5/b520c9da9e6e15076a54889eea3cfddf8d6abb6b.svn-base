@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root id="webserviceConfig">
+	<cmd id="wlblogin" service="userWebServiceImpl">
+		<prop id="usercode">用户帐号</prop>
+		<prop id="password">用户密码</prop>
+	</cmd>
+	<cmd id="wlbtasklist" service="workOrderWebServiceImpl">
+		<prop id="usercode">用户帐号</prop>
+		<prop id="page">第几页</prop>
+		<prop id="pagesize">每页行数</prop>
+	</cmd>
+	<cmd id="wlbhandledtasklist" service="workOrderWebServiceImpl">
+		<prop id="usercode">用户帐号</prop>
+		<prop id="page">第几页</prop>
+		<prop id="pagesize">每页行数</prop>
+	</cmd>
+	<cmd id="wlbtaskdetail" service="workOrderWebServiceImpl">
+		<prop id="usercode">用户帐号</prop>
+		<prop id="id">流程流水号</prop>
+		<prop id="pid">流程号</prop>
+		<prop id="taskcode">工单单号</prop>
+		<prop id="step">流程步骤号</prop>
+	</cmd>
+	<cmd id="wlbtaskdealsign" service="workOrderWebServiceImpl">
+		<prop id="usercode">用户帐号</prop>
+		<prop id="id">流程流水号</prop>
+		<prop id="pid">流程号</prop>
+		<prop id="step">流程步骤号</prop>
+		<prop id="taskcode">工单单号</prop>
+		<prop id="patrolgroupcode">巡检组编号</prop>
+		<prop id="signflag">是否签收</prop>
+		<prop id="signdetail">签/拒收说明</prop>
+	</cmd>
+	<cmd id="wlbtaskdealrequest" service="workOrderWebServiceImpl">
+		<prop id="usercode">用户帐号</prop>
+		<prop id="id">流程流水号</prop>
+		<prop id="pid">流程号</prop>
+		<prop id="step">流程步骤号</prop>
+		<prop id="taskcode">工单单号</prop>
+		<prop id="issubmit">是否多次提交</prop>
+		<prop id="remark">任务回复</prop>
+		<prop id="approvercode">提交审核人用户帐号</prop>
+	</cmd>
+	<cmd id="wlbtaskdealsend" service="workOrderWebServiceImpl">
+		<prop id="usercode">用户帐号</prop>
+		<prop id="id">流程流水号</prop>
+		<prop id="taskcode">工单单号</prop>
+		<prop id="receivercode">转派接收人用户帐号</prop>
+		<prop id="tasktype">工单类型</prop>
+		<prop id="taskdate">处理时限</prop>
+		<prop id="taskrequest">工单要求</prop>
+		<prop id="taskname">工单标题</prop>
+	</cmd>
+	<cmd id="wlbtaskdealrefuse" service="workOrderWebServiceImpl">
+		<prop id="usercode">用户帐号</prop>
+		<prop id="id">流程流水号</prop>
+		<prop id="pid">流程号</prop>
+		<prop id="step">流程步骤号</prop>
+		<prop id="taskcode">工单单号</prop>
+		<prop id="result">确认结果</prop>
+		<prop id="remark">确认意见</prop>
+		<prop id="approvercode">转审接收人用户帐号</prop>
+	</cmd>
+	<cmd id="wlbtaskdealcheck" service="workOrderWebServiceImpl">
+		<prop id="usercode">用户帐号</prop>
+		<prop id="id">流程流水号</prop>
+		<prop id="pid">流程号</prop>
+		<prop id="step">流程步骤号</prop>
+		<prop id="taskcode">工单单号</prop>
+		<prop id="result">验证结果</prop>
+		<prop id="remark">验证意见</prop>
+		<prop id="approvercode">转审接收人用户帐号</prop>
+	</cmd>
+	<cmd id="wlbtasktypelist" service="workOrderWebServiceImpl">
+		<prop id="usercode">用户帐号</prop>
+	</cmd>
+	<cmd id="wlbpatrolGroupList" service="userWebServiceImpl">
+		<prop id="usercode">用户帐号</prop>
+		<prop id="page">第几页</prop>
+		<prop id="pagesize">每页行数</prop>
+		<prop id="patrolgroupname">搜索的巡检组名</prop>
+	</cmd>
+	<cmd id="wlbuserinfo" service="userWebServiceImpl">
+		<prop id="usercode">用户帐号</prop>
+		<prop id="page">第几页</prop>
+		<prop id="pagesize">每页行数</prop>
+		<prop id="username">搜索的用户名</prop>
+	</cmd>
+</root>

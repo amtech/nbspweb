@@ -1,0 +1,1012 @@
+﻿@charset "utf-8";
+/* 
+	@名称: style 代维综合系统自定义样式文件
+	@功能: 定义代维综合主界面，表格，列表等公用样式。
+*/
+/* CSS Document */
+*,html,body {
+	/*font: 9pt "宋体", "Lucida Sans Unicode", Tahoma, Verdana;*/
+	font-family: '宋体', 'Tahoma', 'Verdana', 'Arial', 'Helvetica',
+		'sans-serif';
+	font-size: 13px;
+	line-height: inherit;
+}
+
+#framecontentTop,#framecontentBottom {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 90px; /*Height of top frame div*/
+	overflow: hidden; /*Disable scrollbars. Set to "scroll" to enable*/
+}
+
+#framecontentBottom {
+	top: auto;
+	bottom: 0;
+	height: 25px; /*Height of bottom frame div*/
+	overflow: hidden; /*Disable scrollbars. Set to "scroll" to enable*/
+	border-top: 1px #FFFFFF solid;
+	background-color: #166DCF;
+	line-height: 25px;
+	color: #A0CDFF;
+	text-align: center;
+}
+
+.framecontentBottom table {
+	width: 80%;
+	border: 1px #D2ECFA solid;
+	margin-top: 10px;
+	text-align: left;
+}
+
+.framecontentBottom td {
+	border: 1px #D2ECFA solid;
+	line-height: 24px;
+	text-indent: 2px;
+	width: 35%;
+	padding: 2px;
+}
+
+.framecontentBottom th {
+	line-height: 24px;
+	border: 1px #D2ECFA solid;
+	text-align: right;
+	background-color: #F0FCFE;
+	width: 15%
+}
+
+#maincontent {
+	position: fixed;
+	top: 90px; /*Set top value to HeightOfTopFrameDiv*/
+	left: 0;
+	right: 0;
+	border: 0;
+	bottom: 25px; /*Set bottom value to HeightOfBottomFrameDiv*/
+	overflow-x: hidden;
+}
+
+* html body { /*IE6 hack*/
+	padding: 10px 0 15px 0;
+	line-height: inherit;
+	color: #393939;
+	/*Set value to (HeightOfTopFrameDiv 0 HeightOfBottomFrameDiv 0)*/
+}
+
+* html #maincontent { /*IE6 hack*/
+	height: 100%;
+	width: 100%;
+}
+
+#loading-mask {
+	position: absolute;
+	background: #F2FBFF;
+	visibility: visible;
+	display: block;
+	width: 100%;
+	height: 100%;
+	filter: alpha(opacity =         
+		                                                         
+		           80);
+	opacity: 0.80;
+	z-index: 999999999;
+}
+
+/*头部定义 开始*/
+.head_top {
+	width: 100%;
+	height: 65px;
+	background-color: #166DCF;
+}
+
+.head_topleft_bg {
+	width: 650px;
+	height: 65px;
+	background-image: url(images/topleft_bg.jpg);
+	background-repeat: no-repeat;
+	float: left;
+}
+
+.head_logo {
+	width: 160px;
+	height: 65px;
+	background-image: url(images/china_mobile.png);
+	background-repeat: no-repeat;
+}
+
+.head_System_Name {
+	width: 50%;
+	height: 65px;
+	font-size: 28px;
+	position: absolute;
+	left: 160px;
+	line-height: 80px;
+	color: #FFF;
+	font-family: "黑体";
+}
+
+.head_text_bg {
+	width: 345px;
+	height: 65px;
+	background-image: url(images/text_bg.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+
+.head_user_Information {
+	width: 20%;
+	height: 30px;
+	line-height: 30px;
+	position: absolute;
+	right: 250px;
+	top: 65px;
+	color: #FFF;
+	text-indent: 25px;
+	white-space: nowrap;
+	background-image: url(images/user.png);
+	background-position: 5% 45%;
+	background-repeat: no-repeat;
+}
+
+.head_Button {
+	width: 234px;
+	height: 22px;
+	position: absolute;
+	top: 65px;
+	right: 12px;
+}
+
+.head_Button ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	float: right;
+}
+
+.head_Button ul li {
+	float: left;
+	position: relative;
+	width: 70px;
+	height: 22px;
+	text-align: center;
+	line-height: 22px;
+	color: #FFF;
+	background-image: url(images/buttom_bg.jpg);
+	list-style: none;
+}
+
+.help {
+	width: 60px;
+	height: 22px;
+	line-height: 23px;
+	background-image: url(images/help_icon.png);
+	text-indent: 10px;
+	background-position: 2% 45%;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+
+.quit {
+	width: 60px;
+	height: 22px;
+	line-height: 23px;
+	background-image: url(images/quit_icon.png);
+	text-indent: 10px;
+	background-position: 2% 45%;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+
+.head_Button li a {
+	color: #FFF;
+	text-decoration: none;
+}
+
+.head_banner {
+	width: 100%;
+	height: 25px;
+	line-height: 25px;
+	background-image: url(images/head_banner_bg.jpg);
+}
+
+.head_banner ul li {
+	float: left;
+	list-style: none;
+	color: #FFFFFF;
+	margin-left: 25px;
+	padding-left: 10px;
+}
+
+/*头部定义 结束*/
+/*底部定义 开始*/
+.bottom {
+	width: 100%;
+	height: 25px;
+	bottom: 0px;
+	position: absolute;
+	border-top: 1px #FFFFFF solid;
+	background-color: #166DCF;
+	line-height: 25px;
+	color: #A0CDFF;
+}
+
+.bottom_left_Information {
+	width: 20%;
+	height: 20px;
+	line-height: 20px;
+	float: left;
+	padding-left: 10px;
+}
+
+.bottom_right_cabletech {
+	float: right;
+	padding-right: 20px;
+	background-image: url(images/cabletech_logo.jpg);
+	text-indent: 35px;
+	background-position: 2% 48%;
+	background-repeat: no-repeat;
+}
+
+/*底部定义 结束*/
+/*main 中心内容开始 */
+.main_iframe {
+	width: 100%;
+	border: 0 none;
+	margin: 0;
+	overflow: hidden;
+}
+
+.content {
+	margin: 0px;
+}
+
+.imgWrap {
+	float: left;
+	width: 72px;
+	height: 72px;
+}
+
+a:link,a:visited,a:active {
+	color: #3372a2;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+div.diary {
+	float: right;
+	width: 138px;
+	margin: 20px 5px 0 0;
+	position: relative;
+	_margin: 20px 5px 0 0;
+}
+
+div.bgDiary {
+	float: left;
+	margin: 19px 0 0 20px;
+	_margin-left: 10px;
+}
+
+#main {
+	text-align: left;
+	margin-top: 5px;
+	_margin-top: 5px;
+	margin-left: 3px;
+	_margin-left: 3px;
+}
+
+.datatable {
+	overflow: auto;
+	padding: 0px;
+	margin: 1px;
+	border-collapse: collapse;
+}
+
+.datatable th {
+	font: 12px "宋体", "Trebuchet MS", 'Verdana', 'Arial', 'Helvetica',
+		'sans-serif';
+	background-color: #E9F3F8;
+	border-collapse: collapse;
+	line-height: 20px;
+		text-align: center;
+}
+
+.datatable td,th {
+	font-size: 12px;
+	padding: 2px;
+	border-collapse: collapse;
+	line-height: 20px;
+	text-align: left;
+}
+
+.datatable td,th {
+	border: 1px solid #BCD8E8;
+	padding: 2px 5px;
+	font: 12px "宋体", "Trebuchet MS", 'Verdana', 'Arial', 'Helvetica',
+		'sans-serif';
+	border-collapse: collapse;
+	line-height: 20px;
+}
+/*首页定义结束*/
+/*menu定义开始*/
+.menu {
+	font-family: arial, sans-serif;
+	position: relative;
+	margin: 0;
+}
+
+.menu ul li a,.menu ul li a:visited {
+	display: block;
+	text-decoration: none;
+	color: #000;
+	width: 80px;
+	height: 25px;
+	text-align: center;
+	color: #fff;
+	line-height: 30px;
+	overflow: hidden;
+}
+
+.menu ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	font-weight: bold;
+}
+
+.menu ul li {
+	float: left;
+	margin-right: 1px;
+	position: relative;
+}
+
+.menu ul li ul {
+	display: none;
+}
+
+/* specific to non IE browsers */
+.menu ul li:hover a {
+	color: #fff;
+	background: #FF8000;
+}
+
+.menu ul li:hover ul {
+	display: block;
+	position: absolute;
+	top: 30px;
+	left: 0;
+	width: 80px;
+}
+
+.menu ul li:hover ul li a.hide {
+	background: #6a3;
+	color: #fff;
+}
+
+.menu ul li:hover ul li:hover a.hide {
+	background: #FFB030;
+	color: #000;
+}
+
+.menu ul li:hover ul li ul {
+	display: none;
+}
+
+.menu ul li:hover ul li a {
+	display: block;
+	background: #C1CD94;
+	color: #000;
+}
+
+.menu ul li:hover ul li a:hover {
+	background: #FFB030;
+	color: #000;
+}
+
+.menu ul li:hover ul li:hover ul {
+	display: block;
+	position: absolute;
+	left: 80px;
+	top: 0;
+}
+
+.menu ul li:hover ul li:hover ul.left {
+	left: -80px;
+}
+/*menu定义结束*/
+
+/*panel 背景*/
+.panel_boder {
+	background-color: #EDF8FE
+}
+/*info li 样式*/
+.info_li {
+	color: #295C81;
+	list-style: url(images/bz.gif);
+	cursor: pointer;
+}
+
+/* 待办任务 li 样式*/
+.task_list {
+	margin: 10px 15px;
+	text-align: center;
+}
+
+.task_li_item {
+	color: #295C81;
+	list-style-type: none;
+	text-align: left;
+}
+
+.task_li_subItem {
+	color: #295C81;
+	list-style: url(images/bz.gif);
+	cursor: pointer;
+	text-align: left;
+	margin-left: 30px;
+}
+/*表格样式*/
+.tabcontent {
+	margin: 5px;
+	border-collapse: collapse !important;
+}
+
+.tabcontent table {
+	border: 1px solid #D2ECFA;
+	border-collapse: collapse !important;
+	margin: 0 auto;
+	text-align: left;
+	width: 100%;
+}
+
+.tabcontent td {
+	border: 1px #D2ECFA solid;
+	line-height: 24px;
+	text-indent: 2px;
+	border-collapse: collapse;
+	white-space: nowrap;
+}
+
+.tabcontent td table {
+	border: 1px #D2ECFA solid;
+	border-collapse: collapse !important;
+}
+
+.tabcontent th {
+	line-height: 24px;
+	border: 1px #D2ECFA solid;
+	text-align: right;
+	background-color: #F0FCFE;
+	border-collapse: collapse;
+	white-space: nowrap;
+}
+/*表格样式*/
+.tabout {
+	margin-top: 10px;
+	text-align: center;
+	border-collapse: collapse !important;
+}
+
+.tabout table {
+	border: 1px solid #D2ECFA;
+	border-collapse: collapse !important;
+	width: 99%;
+	text-align: center;
+}
+
+.tabout td {
+	border: 1px #D2ECFA solid;
+	line-height: 24px;
+	text-indent: 2px;
+	border-collapse: collapse;
+	text-align: center
+}
+
+.tabout td table {
+	border: 1px #D2ECFA solid;
+	border-collapse: collapse !important;
+	table-layout: fixed;
+	width: 100%;
+}
+
+.tabout td table th {
+	border-collapse: collapse !important;
+	text-align: center;
+}
+
+.tabout td table td {
+	text-align: left;
+	word-wrap: break-word;
+}
+
+.tabout td   table   td   input {
+	border: solid 1px #999999;
+	background-color: #ffffff;
+	text-align: left;
+	height: 20px;
+}
+
+.tabout th {
+	line-height: 24px;
+	border: 1px #D2ECFA solid;
+	text-align: right;
+	background-color: #F0FCFE;
+	border-collapse: collapse;
+	text-align: center;
+}
+
+.tdl {
+	line-height: 24px;
+	border: 1px #D2ECFA solid;
+	text-align: right;
+	background-color: #F0FCFE;
+}
+
+.tdr {
+	border: 1px #D2ECFA solid;
+	line-height: 24px;
+	text-indent: 2px;
+}
+
+.tabcontent div {
+	border-collapse: collapse !important;
+}
+/*按钮样式*/
+.button {
+	color: #003399;
+	border: 0px #003399 solid;
+	width: 64px;
+	height: 23px;
+	background-color: #e8f4ff;
+	cursor: hand;
+	line-height: 23px;
+	font-style: normal;
+	background-image: url("images/cq_bg.jpg");
+}
+/*不定义宽度的按钮样式*/
+.button_length {
+	color: #003399;
+	border: 0px #003399 solid;
+	height: 23px;
+	background-color: #e8f4ff;
+	cursor: hand;
+	line-height: 23px;
+	font-style: normal;
+	background-image: url("images/cq_bg.jpg");
+}
+/*输入框样式*/
+.inputtext {
+	border: solid 1px #999999;
+	background-color: #ffffff;
+	text-align: left;
+	height: 20px;
+	width: 150px;
+}
+/*错误提示样式*/
+.error {
+	font-style: italic;
+	color: red;
+	font-weight: bold;
+}
+/*页面标题导航头背景*/
+.title_bg {
+	background-image: url("images/tablet_title_bg.jpg");
+	background-repeat: repeat-x;
+	height: 24px;
+	width: 100%;
+}
+/*页面标题导航头样式*/
+.title {
+	background-image: url("images/home_icon.png");
+	background-position: 1% 45%;
+	background-repeat: no-repeat;
+	color: #1D5987;
+	float: right;
+	font-weight: bold;
+	font-size: 12px;
+	height: 24px;
+	line-height: 24px;
+	text-align: left;
+	text-indent: 32px;
+	width: 100%;
+}
+/*列表样式搜索*/
+。search_box {
+	width: 100%;
+	padding: 5px;
+	background-color: black;
+}
+/*分页样式*/
+.pagination_box {
+	margin: 10px 5px 10px 5px;
+	font-size: 12px;
+}
+
+div.pagination {
+	padding: 3px;
+	margin: 3px;
+}
+
+div.pagination a {
+	padding: 2px 5px 2px 5px;
+	margin: 2px;
+	border: 1px solid #AAE;
+	text-decoration: none; /* no underline */
+	color: #15B;
+}
+
+div.pagination a:hover,div.pagination a:active {
+	border: 1px solid #000099;
+	color: #000;
+}
+
+div.pagination span.current {
+	padding: 2px 5px 2px 5px;
+	margin: 2px;
+	border: 1px solid #AAE;
+	font-weight: bold;
+	background-color: #26B;;
+	color: #fff;
+}
+
+div.pagination span.disabled {
+	padding: 2px 5px 2px 5px;
+	margin: 2px;
+	border: 1px solid #EEE;
+	color: #DDD;
+}
+
+/*文件上传下载*/
+.upload {
+	color: red;
+}
+
+.newfile {
+	color: red;
+}
+
+.oldfile {
+	color: red;
+}
+
+.btnLook {
+	border-bottom-color: #005B9E;
+	border-style: none none solid solid;
+}
+
+.link_text {
+	text-decoration: underline;
+	color: blue;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+/*我的工作主页面*/
+.menu_group {
+	float: left;
+	margin: 10px;
+	width: 715px background-color:                      #fff;
+}
+
+.m_menu {
+	height: 112px;
+	min-width: 960px;
+	margin: 10px;
+	padding: 0;
+}
+
+.m_menu img {
+	border: 0px solid #d3d7d6;
+	padding: 0px;
+}
+
+.m_module {
+	text-align: center;
+	color: #5c5c5c;
+	float: left;
+	height: 99%;
+	white-space: nowrap;
+	list-style: none;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	width: 45%
+}
+
+p.mtitle {
+	font-size: 12px;
+}
+
+a {
+	text-decoration: none;
+}
+
+.block-title {
+	position: relative;
+	margin-bottom: 8px;
+	border-bottom: 1px solid #fff;
+	line-height: 15px;
+	_zoom: 1;
+	font-weight: bold;
+}
+
+.block-title h2 {
+	font-size: 14px;
+	border-bottom: 1px solid #c4d4dd;
+	height: 19px;
+}
+
+.text_red {
+	text-align: center;
+	color: red;
+	font-size: 10px;
+	text-decoration: none;
+}
+
+.text_default {
+	text-align: center;
+	font-weight: bold;
+	color: #636306;
+	text-decoration: none;
+	list-style: none;
+	list-style-position: inside;
+}
+
+.hovertad {
+	background: none repeat scroll 0 0 #FF8000;
+	color: #FFFFFF;
+}
+
+.list table {
+	width: 100%;
+	margin-bottom: 18px;
+	padding: 0;
+	font-size: 13px;
+	border-spacing: 0;
+	border: 1px solid #D2ECFA;
+	border-collapse: collapse !important;
+}
+
+.list table th {
+	padding: 5px;
+	padding-left: 10px;
+	line-height: 24px;
+	font-size: 12px;
+	font-weight: bold;
+	cursor: pointer;
+	text-align: center;
+	vertical-align: middle;
+	border: 1px #D2ECFA solid;
+	background-color: #F0FCFE;
+	white-space: nowrap;
+}
+
+.list table td {
+	padding: 5px;
+	padding-left: 10px;
+	line-height: 24px;
+	vertical-align: top;
+	border: 1px #D2ECFA solid;
+}
+
+.nowrap {
+	white-space: nowrap;
+}
+
+/**EXCEL导出按钮**/
+.exprotButton {
+	display: inline-block;
+	color: #003399;
+	border: 0px #003399 solid;
+	width: 64px;
+	height: 23px;
+	background-color: #e8f4ff;
+	cursor: hand;
+	line-height: 23px;
+	font-style: normal;
+	margin-left: 3px;
+	background-image: url("images/cq_bg.jpg");
+}
+
+.exprotButton:link {
+	text-decoration: none;
+}
+
+.exprotButton:visited {
+	text-decoration: none;
+}
+
+.exprotButton:hover {
+	text-decoration: none;
+}
+
+.exprotButton:active {
+	text-decoration: none;
+}
+/*选择树TAG文本框*/
+.treetext {
+	border: solid 1px #999999;
+	background-color: #ffffff;
+	text-align: left;
+	height: 20px;
+	width: 220px;
+}
+
+.li-zhxx {
+	list-style-type: none;
+	list-style-image: url(./images/myaccount.gif);
+	list-style-position: inside;
+	height: 16px;
+	line-height: 16px;
+}
+
+.li-db {
+	list-style-type: none;
+	list-style-image: url(./images/task.gif);
+	list-style-position: inside;
+	height: 16px;
+	line-height: 16px;
+}
+
+.li-gg {
+	list-style-type: none;
+	list-style-image: url(./images/outbox.gif);
+	list-style-position: inside;
+	height: 16px;
+	line-height: 16px;
+}
+
+.gg {
+	list-style-type: none;
+	list-style-image: url(./images/gg.gif);
+	list-style-position: inside;
+	height: 16px;
+	line-height: 16px;
+}
+
+.xw {
+	list-style-type: none;
+	list-style-image: url(./images/hy.gif);
+	list-style-position: inside;
+	height: 16px;
+	line-height: 16px;
+}
+
+.li-grgzt {
+	list-style-type: none;
+	list-style-image: url(./images/memeber.gif);
+	list-style-position: inside;
+	height: 16px;
+	line-height: 16px;
+}
+
+.li-jrtj {
+	list-style-type: none;
+	list-style-image: url(./images/process.gif);
+	list-style-position: inside;
+	height: 16px;
+	line-height: 16px;
+}
+
+.li-zxry {
+	list-style-type: none;
+	list-style-image: url(./images/customers.gif);
+	list-style-position: inside;
+	height: 16px;
+	line-height: 16px;
+}
+
+#container {
+	margin: 0 auto;
+	width: 100%;
+}
+
+#columns td {
+	padding: 0 2px;
+	vertical-align: top;
+}
+
+.portlet {
+	cursor: default;
+	margin: 0 0 4px;
+	width: 100%;
+	border: 1px solid #A6C9E2;
+	display: block;
+}
+
+.portlet_topper {
+	background: url("images/ui-bg_inset-hard_100_fcfdfd_1x100.png") repeat-x
+		scroll bottom #FCFDFD;
+	padding: 5px 4px;
+}
+
+.portlet_topper li span {
+	font-weight: bold;
+}
+
+.portlet_topper li a {
+	float: right;
+}
+
+.portlet_content {
+	padding: 5px;
+	display: block;
+}
+
+.portlet_content p {
+	line-height: 150%;
+	text-align: justify;
+}
+
+.portlet_content:after {
+	content: ".";
+	height: 0px;
+	display: block;
+	clear: both;
+	visibility: hidden;
+}
+
+.mytab {
+	font-size: 12px;
+}
+
+.mytab ul {
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	PADDING-BOTTOM: 0px;
+	MARGIN: 0px 0px 0px 10px;
+	PADDING-TOP: 0px;
+}
+
+.mytab ul li {
+	list-style: none;
+	float: left;
+	display: block;
+	background: url(./images/tagleft.gif) no-repeat left bottom;
+	margin-right: 1px;
+	height: 23px;
+	line-height: 23px;
+}
+
+.mytab ul li a {
+	padding-right: 10px;
+	padding-left: 10px;
+	background: url(./images/tagright.gif) no-repeat right bottom;
+	float: left;
+	padding-bottom: 0px;
+	color: #999;
+	line-height: 23px;
+	padding-top: 0px;
+	height: 23px;
+	text-decoration: none !important;
+}
+
+.mytab ul li.selected {
+	background-position: left top;
+	margin-bottom: -2px;
+	position: relative;
+	height: 25px;
+	cursor: default;
+}
+
+.mytab ul li.selected a {
+	BACKGROUND-POSITION: right top;
+	COLOR: #000;
+	LINE-HEIGHT: 25px;
+	HEIGHT: 25px
+}
+
+.mytab div {
+	padding-top: 1px;
+	padding-left: 5px;
+	padding-right: 5px;
+	clear: left;
+}

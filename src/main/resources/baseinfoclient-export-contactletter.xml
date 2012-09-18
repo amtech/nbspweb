@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items> 
+    <export>
+    	 <excel key="listdate4query" name="联系函查询统计列表 " dataService="businessContactLetterServiceImpl">
+    		<column name="文号" datakey="DOCUMENTNUMBER" ></column>
+    		<column name="标题" datakey="TITLE" ></column>
+    		<column name="发布人" datakey="RELEASEUSERNAME" ></column>
+    		<column name="重要程度" datakey="ISEMERGENCY" ></column>
+    		<column name="发布日期" datakey="RELEASETIME" ></column>
+    		<column name="过期时限" datakey="EXPIRATIONTIME" ></column>
+    		<column name="类型" datakey="TYPE" ></column>
+    		<column name="状态" datakey="STATUSNAME" ></column> 
+    	 </excel>
+    </export>
+</items>

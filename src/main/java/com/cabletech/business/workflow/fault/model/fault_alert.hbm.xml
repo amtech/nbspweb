@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2010-7-13 16:52:49 by Hibernate Tools 3.3.0.GA -->
+<hibernate-mapping>
+	<class name="com.cabletech.business.workflow.fault.model.FaultAlert" table="WTROUBLE_ALARM">
+		<id name="id" type="string">
+			<column name="ID" length="12" />
+			<generator class="com.cabletech.common.util.StrSequenceGenerator">
+				<param name="sequence">SEQ_WTROUBLE_ALARM_ID</param>
+				<param name="length">12</param>
+			</generator>
+		</id>
+		<property name="troubleTitle" type="string">
+			<column name="TROUBLE_TITLE" />
+		</property>
+		<property name="findType" type="string">
+			<column name="FIND_TYPE" />
+		</property>
+		<property name="eomsId" type="string">
+			<column name="EOMS_ID" />
+		</property>
+		<property name="troubleTime" type="timestamp">
+			<column name="TROUBLE_TIME" />
+		</property>
+		<property name="isInstancy" type="string">
+			<column name="IS_INSTANCY" />
+		</property>
+		<property name="troubleDesc" type="string">
+			<column name="TROUBLE_DESC" />
+		</property>
+		<property name="stationId" type="string">
+			<column name="STATION_ID" />
+		</property>
+		<property name="stationType" type="string">
+			<column name="STATION_TYPE" />
+		</property>
+		<property name="address" type="string">
+			<column name="ADDRESS" />
+		</property>
+		<property name="troubleLevel" type="string">
+			<column name="TROUBLE_LEVEL" />
+		</property>
+		<property name="businessType" type="string">
+			<column name="BUSINESS_TYPE" />
+		</property>
+		<property name="state" type="string">
+			<column name="IGNORE_STATE" />
+		</property>
+		<property name="handler" type="string">
+			<column name="HANDLER" />
+		</property>
+		<property name="ignoreTime" type="timestamp">
+			<column name="IGNORE_TIME" />
+		</property>
+		<property name="reporter" type="string">
+			<column name="REPORTER" />
+		</property>
+		<property name="reportTime" type="timestamp">
+			<column name="REPORT_TIME" />
+		</property>
+	</class>
+</hibernate-mapping>

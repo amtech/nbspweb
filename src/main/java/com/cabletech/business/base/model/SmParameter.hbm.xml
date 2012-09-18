@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping
+    PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cabletech.business.base.model.SmParameter"  table="WORKORDER_CONTROL_INFO">
+        <id name="id" type="string" unsaved-value="null" >
+            <column name="id" sql-type="char(12)" not-null="true"/>
+            <generator class="com.cabletech.common.util.StrSequenceGenerator">
+            	<param name="sequence">SEQ_WORKORDER_CONTROL_INFO_ID</param>
+               	<param name="length">12</param>
+            </generator>
+        </id>
+        <property name="workorderId" column="WORKORDER_ID"/>
+        <property name="businessType" column="PROFESSION_TYPE"/>
+        <property name="workorderType" column="WORKORDER_TYPE"/>
+        <property name="workorderTitle" column="WORKORDER_TITLE"/>
+        <property name="handleLimit" column="HANDLE_LIMIT" type="timestamp"/>
+        <property name="handlePersonId" column="HANDLE_PERSONID"/>
+        <property name="smsSendFlg" column="SMS_SEND_FLG"/>
+        <property name="simId" column="PHONE"/>
+    </class>
+</hibernate-mapping>

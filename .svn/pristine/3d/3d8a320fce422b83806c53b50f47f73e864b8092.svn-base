@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- BASEINFOCLIENT 属性配置 -->
+<!-- 维修作业计划模块   EXCEL导出配置 -->
+<items> 
+    <export>
+    	<excel key="wmaintainwaithandledlist" name="维修作业计划待办工作列表 " dataService="WMaintainHandleServiceImpl">
+    		<column name="维修计划名称" datakey="PLAN_NAME" ></column>
+    		<column name="地市" datakey="REGIONNAME" ></column>
+    		<column name="计划时间" datakey="PLAN_DATE" ></column>
+    		<column name="创建人" datakey="CREATER_NAME" ></column>
+    		<column name="创建时间" datakey="CREATE_DATE_DIS" ></column>
+    		<column name="代维公司" datakey="ORGNAME" ></column>
+    		<column name="维护组" datakey="PATROLGROUP_NAME" ></column>
+    		<column name="状态" datakey="PLAN_STATE" constantName="wmaintainwaithandledliststate" ></column>
+    	 </excel>
+    	 <excel key="wmaintainhandledlist" name="维修作业计划已办工作列表 " dataService="WMaintainHandleServiceImpl">
+    		<column name="维修计划名称" datakey="PLAN_NAME" ></column>
+    		<column name="地市" datakey="REGIONNAME" ></column>
+    		<column name="计划时间" datakey="PLAN_DATE" ></column>
+    		<column name="创建人" datakey="CREATER_NAME" ></column>
+    		<column name="创建时间" datakey="CREATE_DATE_DIS" ></column>
+    		<column name="代维公司" datakey="ORGNAME" ></column>
+    		<column name="维护组" datakey="PATROLGROUP_NAME" ></column>
+    		<column name="状态" datakey="PLAN_STATE" constantName="wmaintainwaithandledliststate" ></column>
+    	 </excel>
+    	 <excel key="wmaintainquerylist" name="维修作业计划查询列表 " dataService="WMaintainQueryServiceImpl">
+    		<column name="维修计划名称" datakey="PLAN_NAME" ></column>
+    		<column name="地市" datakey="REGIONNAME" ></column>
+    		<column name="计划时间" datakey="PLAN_DATE" ></column>
+    		<column name="创建人" datakey="CREATER_NAME" ></column>
+    		<column name="创建时间" datakey="CREATE_DATE_DIS" ></column>
+    		<column name="代维公司" datakey="ORGNAME" ></column>
+    		<column name="维护组" datakey="PATROLGROUP_NAME" ></column>
+    		<column name="状态" datakey="PLAN_STATE" constantName="wmaintainwaithandledliststate" ></column>
+    	 </excel>
+  		 <!-- 常量 -->
+    	 <constant name="wmaintainwaithandledliststate">
+    	 	<item key="1" value="暂存"></item>
+    		<item key="2" value="待审核"></item>
+    		<item key="3" value="计划退回"></item>
+    		<item key="4" value="处理问题"></item>
+    		<item key="5" value="报告审核"></item>
+    		<item key="6" value="报告退回"></item>
+    		<item key="7" value="归档"></item>
+    		<item key="8" value="已取消"></item>
+    	 </constant>
+    </export>
+</items>

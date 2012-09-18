@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2010-7-13 16:52:49 by Hibernate Tools 3.3.0.GA -->
+<hibernate-mapping>
+	<class name="com.cabletech.business.sysmanager.model.WwWorkorderCCInfo"
+		table="WW_WORKORDER_CC_INFO">
+		<id name="id" type="string">
+			<column name="ID" length="40" />
+			<generator class="com.cabletech.common.util.StrSequenceGenerator">
+				<param name="sequence">SEQ_WORKORDER_CC_ID</param>
+				<param name="length">40</param>
+			</generator>
+		</id>
+		<property name="workorderId" type="string">
+			<column name="WORKORDER_ID" length="8" />
+		</property>
+		<property name="workorderType" type="string">
+			<column name="WORKORDER_TYPE" length="122" />
+		</property>
+		<property name="creater" type="string">
+			<column name="CREATER" length="122" />
+		</property>
+		<property name="createTime" type="integer">
+			<column name="CREATE_TIME" />
+		</property>
+		<property name="ccPersonId" type="string">
+			<column name="CC_PERSONID" length="50">
+			</column>
+		</property>
+		<property name="status" type="string">
+			<column name="STATUS" length="4" />
+		</property>
+		<property name="confirmTime" type="timestamp">
+			<column name="CONFIRM_TIME" />
+		</property>
+		<property name="confirmRemark" type="string">
+			<column name="CONFIRM_REMARK" length="500"></column>
+		</property>
+	</class>
+</hibernate-mapping>

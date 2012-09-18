@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<!-- struts2文件按照模块进行管理，不同的模块配置在不同的的文件中；只有全局变量配置在该文件中。 -->
+<struts>
+	<!-- 全局设置 -->
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<constant name="struts.objectFactory" value="spring"></constant>
+	<constant name="struts.convention.package.locators" value="action" />
+	<constant name="struts.convention.default.parent.package"
+		value="base-package" />
+	<package name="base-package" extends="struts-default">
+		<global-results>
+			<!-- 下面定义的结果对所有的Action都有效 -->
+			<!-- 消息提示 提示级别分为错误、警告、提示, exception 最严重的错误用于处理未知的异常 在使用应用级别的三个异常提示时，需要在Action中指定提示信息，以及需要返回的制定页面 -->
+			<result name="success">/common/appnotice.jsp</result>
+		</global-results>
+	</package>
+</struts>

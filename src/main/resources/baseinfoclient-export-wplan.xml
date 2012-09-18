@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 巡检模块   EXCEL导出配置 -->
+<items> 
+    <export>
+    	 <excel key="schedule_region" name="巡检进度按地市查询列表 " dataService="patrolinfoScheduleServiceImpl">
+    		<column name="区域" datakey="REGIONNAME" ></column>
+    		<column name="巡检站点数" datakey="RESNUB" ></column>
+    		<column name="隐患站点数" datakey="EXCNUB" ></column>
+    		<column name="异常项" datakey="EXCITEM" ></column>
+    	 </excel>
+    	 <excel key="schedule_org" name="巡检进度按代维公司查询列表 " dataService="patrolinfoScheduleServiceImpl">
+    		<column name="区域" datakey="REGIONNAME" ></column>
+    		<column name="代维公司" datakey="NAME" ></column>
+    		<column name="巡检站点数" datakey="RESNUB" ></column>
+    		<column name="隐患站点数" datakey="EXCNUB" ></column>
+    		<column name="异常项" datakey="EXCITEM" ></column>
+    	 </excel>
+    	 <excel key="schedule_patrolgroup" name="巡检进度按巡检组查询列表 " dataService="patrolinfoScheduleServiceImpl">
+    		<column name="区域" datakey="REGIONNAME" ></column>
+    		<column name="代维公司" datakey="ORGNAME" ></column>
+    		<column name="巡检组" datakey="NAME" ></column>
+    		<column name="巡检站点数" datakey="RESNUB" ></column>
+    		<column name="隐患站点数" datakey="EXCNUB" ></column>
+    		<column name="异常项" datakey="EXCITEM" ></column>
+    	 </excel>
+    	 <excel key="schedule_patrolman" name="巡检进度按巡检员查询列表 " dataService="patrolinfoScheduleServiceImpl">
+    		<column name="区域" datakey="REGIONNAME" ></column>
+    		<column name="代维公司" datakey="ORGNAME" ></column>
+    		<column name="巡检组" datakey="PARENTNAME" ></column>
+    		<column name="巡检员" datakey="NAME" ></column>
+    		<column name="巡检站点数" datakey="RESNUB" ></column>
+    		<column name="隐患站点数" datakey="EXCNUB" ></column>
+    		<column name="异常项" datakey="EXCITEM" ></column>
+    	 </excel>  
+    	 <excel key="schedule_detailed" name="巡检明细列表 " dataService="patrolinfoScheduleServiceImpl">
+    		<column name="资源类型" datakey="RESTYPE" ></column>
+    		<column name="资源名称" datakey="RESNAME" ></column>
+    		<column name="维护单位" datakey="ORGNAME" ></column>
+    		<column name="巡检组" datakey="PATROLGROUPNAME" ></column>
+    		<column name="巡检人" datakey="PATROLMANNAME" ></column>
+    		<column name="到达时间" datakey="START_TIME" ></column>
+    		<column name="巡检开始时间" datakey="START_TIME" ></column>
+    		<column name="巡检结束时间" datakey="END_TIME" ></column>
+    		<column name="巡检时长" datakey="PRESSURE" ></column>
+    	 </excel>
+    </export>
+</items>

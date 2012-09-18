@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping
+    PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class 	name="com.cabletech.business.monthcost.model.MonthOtherCost" table="MONTH_OTHER_COST">
+		<id name="id" type="string" unsaved-value="null">
+			<column name="id" sql-type="char(32)" not-null="true" />
+			<generator class="com.cabletech.common.util.StrSequenceGenerator">
+				<param name="sequence">SEQ_MONTHOTHERCOST_ID</param>
+				<param name="length">12</param>
+			</generator>
+		</id> 
+		<property name="regionId" column="REGIONID" type="string" />
+		<property name="months" column="MONTHS" type="string" />
+		<property name="contractorId" column="CONTRACTORID" type="string" />
+		<property name="typet" column="TYPET" type="string" />
+		<property name="shouldMoney" column="SHOULDMONEY" type="string" />
+		<property name="factMoney" column="FACTMONEY" type="string" />
+		<property name="remark" column="REMARK" type="string" />
+		<property name="writePersonId" column="WRITEPERSONID" type="string" />
+		<property name="writeDate" column="WRITEDATE" type="string" />
+	</class>
+	
+</hibernate-mapping>

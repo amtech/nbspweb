@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root id="assessConfig">
+	<constant id="01" name="monthAssessTable">
+		<prop id="startRow">8</prop>
+		<prop id="startCol">0</prop>
+		<prop id="startSheet">0</prop>
+		<prop id="指标名称">name</prop>
+		<prop id="基准值" rule="isNumber">benchmarkValue</prop>
+		<prop id="挑战值" rule="isNumber">challengeValue</prop>
+		<prop id="指标权重" rule="isNumber">weight</prop>
+		<prop id="计算公式和要求">demandDesc</prop>
+		<prop id="评价标准">evaluationCriterion</prop>
+		<prop id="name">指标名称</prop>
+		<prop id="benchmarkValue">基准值</prop>
+		<prop id="challengeValue">挑战值</prop>
+		<prop id="weight">指标权重</prop>
+		<prop id="demandDesc">计算公式和要求</prop>
+		<prop id="evaluationCriterion">评价标准</prop>
+	</constant>
+	<constant id="02" name="yearAssessTable">
+		<prop id="startRow">9</prop>
+		<prop id="startCol">0</prop>
+		<prop id="startSheet">0</prop>
+		<prop id="指标名称">name</prop>
+		<prop id="基准值" rule="isNumber">benchmarkValue</prop>
+		<prop id="挑战值" rule="isNumber">challengeValue</prop>
+		<prop id="指标权重" rule="isNumber">weight</prop>
+		<prop id="计算公式和要求">demandDesc</prop>
+		<prop id="评价标准">evaluationCriterion</prop>
+		<prop id="name">指标名称</prop>
+		<prop id="benchmarkValue">基准值</prop>
+		<prop id="challengeValue">挑战值</prop>
+		<prop id="weight">指标权重</prop>
+		<prop id="demandDesc">计算公式和要求</prop>
+		<prop id="evaluationCriterion">评价标准</prop>
+	</constant>
+	<constant id="03" name="checkTable">
+		<prop id="startRow">4</prop>
+		<prop id="startCol">0</prop>
+		<prop id="startSheet">0</prop>
+		<prop id="要求">demandDesc</prop>
+		<prop id="评分标准">evaluationCriterion</prop>
+		<prop id="demandDesc">要求</prop>
+		<prop id="evaluationCriterion">评分标准</prop>
+	</constant>
+</root>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- BASEINFOCLIENT 属性配置 -->
+<!-- 供电保障模块   EXCEL导出配置 -->
+<items> 
+    <export>
+    	 <excel key="oilenginelist" name="油机信息列表 " dataService="oilEngineManageServiceImpl">
+    		<column name="油机编号" datakey="OILENGINE_CODE" ></column>
+    		<column name="油机型号" datakey="OILENGINE_MODEL" ></column>
+    		<column name="油料类型" datakey="OIL_TYPE" ></column>
+    		<column name="额定功率(KW)" datakey="RATION_POWER" ></column>
+    		<column name="所属区域" datakey="DISTRICT" ></column>
+    		<column name="维护单位" datakey="MAINTENANCE_ID" ></column>
+    		<column name="负责人" datakey="PRINCIPAL" ></column>
+    		<column name="联系电话" datakey="PHONE" ></column>
+    		<column name="使用状态" datakey="STATE" ></column>
+    	 </excel>
+    	 <excel key="oeoutagealarmlist" name="断电告警列表 " dataService="oeOutageAlarmServiceImpl">
+    		<column name="站点名称" datakey="RS_NAME" ></column>
+    		<column name="站点类型" datakey="RS_TYPE" fetchmap="select t.lable from base_sysdictionary t where t.columntype = 'pointtype' and t.codevalue = ?" ></column>
+    		<column name="断电时间" datakey="BLACKOUT_TIME_DIS" ></column>
+    		<column name="断电原因" datakey="BLACKOUT_REASON" ></column>
+    		<column name="接收时间" datakey="CREATE_TIME_DIS" ></column>
+    		<column name="状态" datakey="STATE" constantName="oeoutagealarmliststate" ></column>
+    	 </excel>
+    	 <excel key="oedispatchtaskdraftlist" name="供电派单草稿箱列表 " dataService="oeDispatchTaskDraftServiceImpl">
+    		<column name="标题" datakey="TASK_NAME" ></column>
+    		<column name="工单号" datakey="TASK_CODE" ></column>
+    		<column name="处理时限" datakey="PROCESS_TIME_DIS" ></column>
+    		<column name="站点名称" datakey="RS_NAME" ></column>
+    		<column name="站点类型" datakey="RS_TYPE" fetchmap="select t.lable from base_sysdictionary t where t.columntype = 'pointtype' and t.codevalue = ?"></column>
+    		<column name="维护单位" datakey="ORG_NAME" ></column>
+    		<column name="派单人" datakey="CREATER_NAME" ></column>
+    		<column name="派单时间" datakey="CREATE_DATE_DIS" ></column>
+    	 </excel>
+    	 <excel key="oedispatchtaskwaithandledlist" name="供电保障待办工作列表 " dataService="oeDispatchTaskWaitHandledServiceImpl">
+    		<column name="标题" datakey="TASK_NAME" ></column>
+    		<column name="工单号" datakey="TASK_CODE" ></column>
+    		<column name="处理时限" datakey="PROCESS_TIME_DIS" ></column>
+    		<column name="站点名称" datakey="RS_NAME" ></column>
+    		<column name="站点类型" datakey="RS_TYPE" fetchmap="select t.lable from base_sysdictionary t where t.columntype = 'pointtype' and t.codevalue = ?"></column>
+    		<column name="维护单位" datakey="ORG_NAME" ></column>
+    		<column name="派单人" datakey="CREATER_NAME" ></column>
+    		<column name="派单时间" datakey="CREATE_DATE_DIS" ></column>
+    		<column name="状态" datakey="PROINST_STATE" ></column>
+    	 </excel>
+    	 <excel key="oedispatchtaskhandledlist" name="供电保障已办工作列表 " dataService="oeDispatchTaskHandledServiceImpl">
+    		<column name="标题" datakey="TASK_NAME" ></column>
+    		<column name="工单号" datakey="TASK_CODE" ></column>
+    		<column name="处理时限" datakey="PROCESS_TIME_DIS" ></column>
+    		<column name="站点名称" datakey="RS_NAME" ></column>
+    		<column name="站点类型" datakey="RS_TYPE" fetchmap="select t.lable from base_sysdictionary t where t.columntype = 'pointtype' and t.codevalue = ?"></column>
+    		<column name="维护单位" datakey="ORG_NAME" ></column>
+    		<column name="派单人" datakey="CREATER_NAME" ></column>
+    		<column name="派单时间" datakey="CREATE_DATE_DIS" ></column>
+    		<column name="状态" datakey="TASK_STATE" constantName="oedispatchtaskstate"></column>
+    	 </excel>
+    	 <excel key="oedispatchtaskwaitcanceledlist" name="供电保障待取消任务列表 " dataService="oeDispatchTaskCancelServiceImpl">
+    		<column name="标题" datakey="TASK_NAME" ></column>
+    		<column name="工单号" datakey="TASK_CODE" ></column>
+    		<column name="处理时限" datakey="PROCESS_TIME_DIS" ></column>
+    		<column name="站点名称" datakey="RS_NAME" ></column>
+    		<column name="站点类型" datakey="RS_TYPE" fetchmap="select t.lable from base_sysdictionary t where t.columntype = 'pointtype' and t.codevalue = ?"></column>
+    		<column name="维护单位" datakey="ORG_NAME" ></column>
+    		<column name="派单人" datakey="CREATER_NAME" ></column>
+    		<column name="派单时间" datakey="CREATE_DATE_DIS" ></column>
+    		<column name="状态" datakey="TASK_STATE" constantName="oedispatchtaskstate"></column>
+    	 </excel>
+    	 <excel key="oedispatchtaskcanceledlist" name="供电保障已取消任务列表 " dataService="oeDispatchTaskCancelServiceImpl">
+    		<column name="标题" datakey="TASK_NAME" ></column>
+    		<column name="工单号" datakey="TASK_CODE" ></column>
+    		<column name="处理时限" datakey="PROCESS_TIME_DIS" ></column>
+    		<column name="站点名称" datakey="RS_NAME" ></column>
+    		<column name="站点类型" datakey="RS_TYPE" fetchmap="select t.lable from base_sysdictionary t where t.columntype = 'pointtype' and t.codevalue = ?"></column>
+    		<column name="维护单位" datakey="ORG_NAME" ></column>
+    		<column name="派单人" datakey="CREATER_NAME" ></column>
+    		<column name="派单时间" datakey="CREATE_DATE_DIS" ></column>
+    		<column name="状态" datakey="TASK_STATE" constantName="oedispatchtaskstate"></column>
+    	 </excel>
+    	 <excel key="oedispatchtaskwaitdeletedlist" name="供电保障待删除列表 " dataService="oeDispatchTaskWaitDeletedServiceImpl">
+    		<column name="标题" datakey="TASK_NAME" ></column>
+    		<column name="工单号" datakey="TASK_CODE" ></column>
+    		<column name="处理时限" datakey="PROCESS_TIME_DIS" ></column>
+    		<column name="站点名称" datakey="RS_NAME" ></column>
+    		<column name="站点类型" datakey="RS_TYPE" fetchmap="select t.lable from base_sysdictionary t where t.columntype = 'pointtype' and t.codevalue = ?"></column>
+    		<column name="维护单位" datakey="ORG_NAME" ></column>
+    		<column name="派单人" datakey="CREATER_NAME" ></column>
+    		<column name="派单时间" datakey="CREATE_DATE_DIS" ></column>
+    		<column name="状态" datakey="TASK_STATE" constantName="oedispatchtaskstate"></column>
+    	 </excel>
+    	 <constant name="oeoutagealarmliststate">
+    		<item key="1" value="未派单"></item>
+    		<item key="2" value="已派单"></item>
+    		<item key="3" value="已忽略"></item>
+    		<item key="4" value="结束"></item>
+    	 </constant>
+    	 <constant name="oedispatchtaskstate">
+    	 	<item key="1" value="待派单"></item>
+    		<item key="2" value="待调度"></item>
+    		<item key="3" value="处理中"></item>
+    		<item key="4" value="回单审核"></item>
+    		<item key="5" value="处理结束"></item>
+    		<item key="6" value="已取消"></item>
+    	 </constant>    
+    </export>
+</items>

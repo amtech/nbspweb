@@ -1,0 +1,99 @@
+body {
+	background-color: #CECECE;
+	margin: 0px;
+	padding: 0px;
+	font-size: 12px;
+}
+
+.login_pic_bg {
+	width: 805px;
+	height: 520px;
+	margin: 0px auto;
+	background-image: url(images/login_pic_bg.png);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -260px;
+	margin-left: -402px;
+}
+
+.logo {
+	width: 150px;
+	height: 65px;
+	background-image: url(images/logo.jpg);
+	margin-top: 50px;
+	margin-left: 20px;
+}
+
+.system_name {
+	width: 68%;
+	height: 45px;
+	float: right;
+	font-size: 24px;
+	margin-top: 42px;
+	font-family: '宋体';
+	font-size: 24px;
+	background-color: 'FAF4FF';
+	line-height: inherit;
+}
+
+.system_name span {
+	font-family: "Microsoft YaHei","宋体",monospace !important;
+	font-size: 24px;
+	color: white;
+	font-weight: bold;
+	line-height: inherit;
+}
+
+.form_messages {
+	width: 50%;
+	margin-top: 35px;
+	height: 50px;
+	float: right;
+	font-size: 12px;
+	line-height: 24px;
+}
+
+.error_messages {
+	position: absolute;
+	margin-top: 5px;
+	margin-left: 60px;
+}
+
+.error_messages span {
+	font-family: '宋体';
+	font-size: 12px;
+	color: red;
+	font-weight: bold;
+	line-height: inherit;
+}
+
+form {
+	line-height: 32px;
+}
+
+.text_input {
+	border: 1px #080081 solid;
+	width: 160px;
+}
+
+.button {
+	width: 70px;
+	height: 24px;
+	border: 0px;
+	background-image: url(images/button.png) ;
+	margin-left: 15px;
+	background-color: transparent;
+	font-size: 12px;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/button.png', sizingMethod='scale');
+	
+}
+
+.text_messages {
+	width: 100%;
+	float: left;
+	margin-top: 150px;
+	line-height: 24px;
+	text-align: center;
+	color: #696969;
+}

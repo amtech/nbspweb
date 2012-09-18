@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping
+    PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cabletech.business.wplan.plan.model.PatrolTemplate"  table="WPLAN_TEMPLATEPLAN">
+       	<id name="planid" type="string" column="PLAN_ID">
+		</id>
+		<property name="templateid" type="string" >
+		 <column name="TEMPLATE_ID" />
+		</property>
+    </class>
+</hibernate-mapping>

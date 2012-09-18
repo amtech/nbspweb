@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.cabletech.business.base.model.UserActionLog" table="BASE_USERACTIONLOG">
+		<id name="id" type="string">
+			<column name="ID" length="12" />
+			<generator class="com.cabletech.common.util.StrSequenceGenerator">
+				<param name="sequence">SEQ_BASELOG_ID</param>
+				<param name="length">12</param>
+			</generator>
+		</id>
+		<property name="personid" type="string">
+			<column name="PERSONID" />
+		</property>
+		<property name="menuid" type="string">
+			<column name="MENUID" />
+		</property>
+		<property name="operate_time" type="timestamp">
+			<column name="OPERATE_TIME" />
+		</property>
+		<property name="class_method" type="string">
+			<column name="CLASS_METHOD" />
+		</property>
+		<property name="method_desc" type="string">
+			<column name="METHOD_DESC" />
+		</property>
+		<property name="loginip" type="string">
+			<column name="LOGINIP" />
+		</property>
+		<property name="recordid" type="string">
+			<column name="RECORDID" />
+		</property>
+		<property name="record" type="string">
+			<column name="RECORDINFO" />
+		</property>
+	</class>
+</hibernate-mapping>

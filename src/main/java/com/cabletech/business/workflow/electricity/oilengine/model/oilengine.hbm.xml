@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class
+		name="com.cabletech.business.workflow.electricity.oilengine.model.OilEngine"
+		table="OE_OILENGINE">
+		<id name="id" type="string">
+			<column name="ID" length="12" />
+			<generator class="com.cabletech.common.util.StrSequenceGenerator">
+				<param name="sequence">SEQ_OE_OILENGINE_ID</param>
+				<param name="length">12</param>
+			</generator>
+		</id>
+		<property name="oilengineCode" type="string">
+			<column name="OILENGINE_CODE" />
+		</property>
+		<property name="oilengineModel" type="string">
+			<column name="OILENGINE_MODEL" />
+		</property>
+		<property name="oilType" type="string">
+			<column name="OIL_TYPE" />
+		</property>
+		<property name="producer" type="string">
+			<column name="PRODUCER" />
+		</property>
+		<property name="rationPower" type="string">
+			<column name="RATION_POWER" />
+		</property>
+		<property name="standardOilwear" type="string">
+			<column name="STANDARD_OILWEAR" />
+		</property>
+		<property name="oilengineType" type="string">
+			<column name="OILENGINE_TYPE" />
+		</property>
+		<property name="oilengineWeight" type="string">
+			<column name="OILENGINE_WEIGHT" />
+		</property>
+		<property name="propertyRight" type="string">
+			<column name="PROPERTY_RIGHT" />
+		</property>
+		<property name="oilengineState" type="string">
+			<column name="OILENGINE_STATE" />
+		</property>
+		<property name="district" type="string">
+			<column name="DISTRICT" />
+		</property>
+		<property name="stationType" type="string">
+			<column name="STATION_TYPE" />
+		</property>
+		<property name="stationId" type="string">
+			<column name="STATION_ID" />
+		</property>
+		<property name="address" type="string">
+			<column name="ADDRESS" />
+		</property>
+		<property name="lon" type="string">
+			<column name="LON" />
+		</property>
+		<property name="lat" type="string">
+			<column name="LAT" />
+		</property>
+		<property name="ctX" type="string">
+			<column name="CT_X" />
+		</property>
+		<property name="ctY" type="string">
+			<column name="CT_Y" />
+		</property>
+		<property name="maintenanceId" type="string">
+			<column name="MAINTENANCE_ID" />
+		</property>
+		<property name="principal" type="string">
+			<column name="PRINCIPAL" />
+		</property>
+		<property name="phone" type="string">
+			<column name="PHONE" />
+		</property>
+		<property name="state" type="string">
+			<column name="STATE" />
+		</property>
+		<property name="remark" type="string">
+			<column name="REMARK" />
+		</property>
+	</class>
+</hibernate-mapping>

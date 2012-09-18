@@ -1,0 +1,117 @@
+--该文件用于存放更新数据表、数据视图、函数和存储过程等sql语句脚本
+--每条sql必须添加如下内容的注释：
+--yyyy-MM-dd 添加人中文名称  添加sql的主要用途
+
+--2012-09-03 赵璧（杨隽录入） 修改资源视图（根据新设计的站点资源表数据进行修改）
+CREATE OR REPLACE VIEW RS_RESOURCERECORD_V AS
+SELECT distinct RZ.XTBH AS ID,RZ.ZYMC AS NAME,VR.REGIONID,RZ.ZDBH AS STATIONCODE,RR.BUSINESS_TYPE AS TYPE,
+RZ.LON,RZ.LAT,'' AS POINTID,'' AS CT_X,'' AS CT_Y,RZ.DZ AS ADDRESS,VR.REGIONNAME
+FROM RES_ZDXX RZ
+JOIN RES_RESOURCETYPE RR ON RZ.XTBH=RR.XTBH
+JOIN VIEW_REGION VR ON RZ.REGIONID=VR.REGIONID;
+
+--2012-09-13 杨隽 修改资源视图（添加站点类型）
+CREATE OR REPLACE VIEW RS_RESOURCERECORD_V AS
+SELECT distinct RZ.XTBH AS ID,RZ.ZYMC AS NAME,VR.REGIONID,RZ.ZDBH AS STATIONCODE,RR.BUSINESS_TYPE AS TYPE,
+RZ.ZDLX AS STATION_TYPE,RZ.LON,RZ.LAT,'' AS POINTID,'' AS CT_X,'' AS CT_Y,RZ.DZ AS ADDRESS,VR.REGIONNAME
+FROM RES_ZDXX RZ
+JOIN RES_RESOURCETYPE RR ON RZ.XTBH=RR.XTBH
+JOIN VIEW_REGION VR ON RZ.REGIONID=VR.REGIONID
+
+--2012-09-14 杨隽 修改资源视图（添加站点状态）
+CREATE OR REPLACE VIEW RS_RESOURCERECORD_V AS
+SELECT distinct RZ.XTBH AS ID,RZ.ZYMC AS NAME,VR.REGIONID,RZ.ZDBH AS STATIONCODE,RR.BUSINESS_TYPE AS TYPE,
+RZ.ZDLX AS STATION_TYPE,RZ.LON,RZ.LAT,'' AS POINTID,'' AS CT_X,'' AS CT_Y,RZ.DZ AS ADDRESS,VR.REGIONNAME,RZ.STATUS
+FROM RES_ZDXX RZ
+JOIN RES_RESOURCETYPE RR ON RZ.XTBH=RR.XTBH
+JOIN VIEW_REGION VR ON RZ.REGIONID=VR.REGIONID
+
+--2012-09-14 杨隽 在WPLAN_PATROLRECORD表中加主键
+alter table WPLAN_PATROLRECORD
+add constraint PK_WPLAN_PATROLRECORD_ID primary key (ID);
+
+--2012-09-14 杨隽 在WPLAN_PATROLRECORD表中加巡检结果编号索引
+create index IND_WPLAN_PATROLRECORD_EID on WPLAN_PATROLRECORD (EXECUTERESULT_ID);
+
+--2012-09-14 杨隽 变更函数中的in语句
+CREATE OR REPLACE FUNCTION FN_GET_EXCEPTION_STATION_COUNT(PLANID varchar,begindate varchar,enddate varchar) RETURN varchar IS
+  icount varchar(50);
+begin
+     if(begindate is not null and enddate is not null)
+     then
+         select count(distinct pr.executeresult_id) into icount 
+         from wplan_patrolrecord pr join WPLAN_PATROLSUBITEM ps on pr.subitem_id=ps.id 
+         where  1=(case when pr.subitem_patrol=ps.exception_value then 1 else 2 end)
+         and exists( 
+         select id from wplan_executeresult 
+         where id=pr.executeresult_id 
+         and plan_id = PLANID 
+         and end_time between to_date(begindate,'yyyy-mm-dd hh24:mi:ss') and to_date(enddate,'yyyy-mm-dd hh24:mi:ss') 
+         );
+     else
+         select count(distinct pr.executeresult_id) into icount 
+         from wplan_patrolrecord pr join WPLAN_PATROLSUBITEM ps on pr.subitem_id=ps.id 
+         where  1=(case when pr.subitem_patrol=ps.exception_value then 1 else 2 end)
+         and exists(
+         select id from wplan_executeresult 
+         where id=pr.executeresult_id
+         and plan_id = PLANID and end_time is not null
+         );
+     end if;
+  return icount;
+  exception
+        when others then
+           return '-1';
+END FN_GET_EXCEPTION_STATION_COUNT;
+/
+
+--2012-09-14 杨隽 变更函数中的in语句
+CREATE OR REPLACE FUNCTION FN_GET_EXCEPTION_STATION_TEAM(TEAMID varchar,begindate varchar,enddate varchar,v_resourcetype varchar) RETURN varchar IS
+  icount varchar(50);
+begin
+     if(begindate is not null and enddate is not null)
+     then
+       select count(distinct pr.executeresult_id) into icount 
+       from wplan_patrolrecord pr join WPLAN_PATROLSUBITEM ps on pr.subitem_id=ps.id 
+       where  1=(case when pr.subitem_patrol=ps.exception_value then 1 else 2 end)
+       and exists( 
+       select id from wplan_executeresult 
+       where id=pr.executeresult_id
+       and patrol_group_id = TEAMID 
+       and arrive_time between to_date(begindate,'yyyy-mm-dd hh24:mi:ss') 
+       and to_date(enddate,'yyyy-mm-dd hh24:mi:ss') 
+       and resource_type=v_resourcetype  
+       );
+     else
+       select count(distinct pr.executeresult_id) into icount 
+       from wplan_patrolrecord pr left join WPLAN_PATROLSUBITEM ps on pr.subitem_id=ps.id 
+       where  1=(case  when pr.subitem_patrol=ps.exception_value then 1 else 2 end)
+       and exists( 
+       select id from wplan_executeresult 
+       where id=pr.executeresult_id
+       and patrol_group_id = TEAMID 
+       and resource_type=v_resourcetype  
+       );
+     end if;
+  return icount;
+  exception
+        when others then
+           return '-1';
+END FN_GET_EXCEPTION_STATION_TEAM;
+/
+
+--2012-09-14 杨隽 变更函数中的distinct id语句
+CREATE OR REPLACE FUNCTION FN_GET_EXCEPTION_ITEM_RID(rid varchar) RETURN varchar IS
+  icount varchar(50);
+begin
+       select count(distinct pr.id) into icount 
+       from wplan_patrolrecord pr 
+       join WPLAN_PATROLSUBITEM ps on pr.subitem_id=ps.id 
+       where  1=(case when pr.subitem_patrol=ps.exception_value then 1 else 2 end)
+       and pr.executeresult_id=rid;
+  return icount;
+  exception
+        when others then
+           return '-1';
+END FN_GET_EXCEPTION_ITEM_RID;
+/

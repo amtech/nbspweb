@@ -1,0 +1,2 @@
+<link href="${ctx }/css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="${ctx }/js/in-min.js" autoload="true" core="${config.cdnurl}/cabletech/ui/js/jquery-1.7.2.min.js"></script>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root id="ratingFormImport"
+	entity="com.cabletech.business.ah.rating.model.RatingFormItemTemp">
+	<column id="item" property-name="item" col-index="0"></column>
+	<column id="weight" property-name="weight" col-index="1"></column>
+	<column id="baseValue" property-name="baseValue" col-index="2"></column>
+	<column id="challengeValue" property-name="challengeValue"
+		col-index="3"></column>
+	<column id="normRemark" property-name="normRemark" col-index="4"></column>
+	<column id="evaluationCriterion" property-name="evaluationCriterion"
+		col-index="5"></column>
+</root>

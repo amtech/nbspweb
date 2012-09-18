@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messages id="workorder">
+	<message id="send_task">
+		{0}工单已派发给你，请签收！
+	</message>
+	<message id="refuse_task">
+		{0}工单被{1}拒签，请你进行拒签确认！
+	</message>
+	<message id="confirm_not_passed">
+		{0}工单拒签确认不通过，请你重新签收！
+	</message>
+	<message id="transfer_confirm">
+		{0}工单拒签确认已经转审给你，请你进行确认！
+	</message>
+	<message id="confirm_passed">
+		{0}工单拒签确认通过，工单流程已经结束！
+	</message>
+	<message id="reply_task">
+		{0}工单的受理人{1}已完成回复，请你进行验证！
+	</message>
+	<message id="approve_not_passed">
+		{0}工单验证不通过，请你重新回复！
+	</message>
+	<message id="transfer_approve">
+		{0}工单已经转审给你，请你进行验证！
+	</message>
+	<message id="approve_passed">
+		{0}工单验证通过，工单流程已经结束！
+	</message>
+</messages>

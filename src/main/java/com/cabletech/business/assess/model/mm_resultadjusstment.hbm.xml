@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2010-7-13 16:52:49 by Hibernate Tools 3.3.0.GA -->
+<hibernate-mapping>
+	<class name="com.cabletech.business.assess.model.AssessResultAdjusstment" table="MM_RESULTADJUSSTMENT">
+		<id name="id" type="string">
+			<column name="ID" length="12" />
+			<generator class="com.cabletech.common.util.StrSequenceGenerator">
+				<param name="sequence">SEQ_ASSESS_ID</param>
+				<param name="length">12</param>
+			</generator>
+		</id>
+		<property name="appealFormId" type="string">
+			<column name="APPEALFORM_ID" />
+		</property>
+		<property name="adjusstmentCause" type="string">
+			<column name="ADJUSSTMENT_CAUSE" />
+		</property>
+		<property name="adjusstmentScore" type="float">
+			<column name="ADJUSSTMENT_SCORE" />
+		</property>
+	</class>
+</hibernate-mapping>

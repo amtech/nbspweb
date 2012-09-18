@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.1.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd"
+	default-lazy-init="true">
+<!-- 外部资源访问接口 -->
+	<bean id="externalResourcesAccessService" class="com.cabletech.common.externalresources.ExternalResourcesAccessService">
+		<property name="caslogoutredirect" value="${caslogoutredirect}"></property>
+		<property name="caslogout" value="${caslogout}"></property>
+		<property name="uploadtemp" value="${uploadtemp}"></property>
+    	<property name="uploadroot" value="${uploadroot}"></property>
+    	<property name="coordinatesource" value="${coordinatesource}"></property>
+    	<property name="coordinatetarget" value="${coordinatetarget}"></property>
+    	<property name="cdnurl" value="${cdnurl}"></property>
+    	<property name="systemregionname" value="${systemregionname}"></property>
+    	<property name="systemregionid" value="${systemregionid}"></property>
+	</bean>
+	
+</beans>

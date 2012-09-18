@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.cabletech.business.ah.familyband.model.AhFamilyBandRecode" table="ah_familyband_recode">
+		<id name="id" type="string" column="id" >
+			<generator
+				class="com.cabletech.common.util.StrSequenceGenerator">
+				<param name="sequence">SEQ_WPLAN_ID</param>
+				<param name="length">12</param>
+			</generator>
+		</id>
+		<property name="contractorId" column="CONTRACTORID" />
+		<property name="patrolmanId" column="patrolmanid" />
+		<property name="startTime" column="starttime" />
+		<property name="endTime" column="endtime" />
+		<property name="range" column="range" />
+		<property name="userNum" column="usernum" />
+		<property name="registerUserId" column="registeruserid" />
+		<property name="registerTime" column="registertime" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.cabletech.business.ah.rating.model.MonthResultForm"
+		table="AH_MONTHRESULT">
+		<id name="id" type="string">
+			<column name="ID" length="12" />
+			<generator class="com.cabletech.common.util.StrSequenceGenerator">
+				<param name="sequence">SEQ_RATING_ID</param>
+				<param name="length">12</param>
+			</generator>
+		</id>
+		<property name="personId" column="PERSON_ID" type="string" /> 
+		<property name="tableId" column="TABLE_ID" type="string" />
+		<property name="yearMonth" column="YEAR_MONTH" type="timestamp" />
+		<property name="position" column="POSITION" type="string" /> 
+		<property name="isExam" column="ISEXAM" type="string" /> 
+		<property name="selfAsseNum" column="SELF_ASSE_NUM" type="int" /> 
+		<property name="examAsseNum" column="EXAM_ASSE_NUM" type="int" /> 
+		<property name="remark" column="REMARK" type="string" /> 
+		<property name="examDate" column="EXAM_DATE" type="timestamp" /> 
+		<property name="examiner" column="EXAMINER" type="string" /> 
+		<property name="flowState" column="FLOW_STATE" type="int"/>
+	</class>
+</hibernate-mapping>
